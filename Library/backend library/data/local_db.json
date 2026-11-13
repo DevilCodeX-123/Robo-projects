@@ -1,0 +1,1368 @@
+{
+  "users": [
+    {
+      "_id": "usr_k0t3ualtx",
+      "fullName": "Mittal",
+      "email": "mittal@robotics.club",
+      "passwordHash": "$2a$10$K4G17iMEjV4dSfCt9Yqntef1nhPZtHcor7jNfhb/gpaeF30ZrL8am",
+      "membershipId": "ROBO-2026-042",
+      "department": "Robotics & Automation",
+      "academicYear": "3rd Year",
+      "teamName": "Combat Robotics Alpha",
+      "role": "MEMBER",
+      "status": "ACTIVE",
+      "contactNumber": "+91 98765 12345",
+      "createdAt": "2026-10-14T11:02:11.885Z"
+    },
+    {
+      "_id": "usr_3f92szsxk",
+      "fullName": "Aryan Sharma",
+      "email": "aryan@robotics.club",
+      "passwordHash": "$2a$10$K4G17iMEjV4dSfCt9Yqntef1nhPZtHcor7jNfhb/gpaeF30ZrL8am",
+      "membershipId": "ROBO-2025-011",
+      "department": "Electronics & Communication",
+      "academicYear": "Final Year",
+      "teamName": "Autonomous Systems",
+      "role": "SENIOR",
+      "status": "ACTIVE",
+      "contactNumber": "+91 98765 43210",
+      "createdAt": "2026-10-14T11:02:11.908Z"
+    },
+    {
+      "_id": "usr_m999fdko0",
+      "fullName": "Dr. Rajesh Verma",
+      "email": "manager@robotics.club",
+      "passwordHash": "$2a$10$K4G17iMEjV4dSfCt9Yqntef1nhPZtHcor7jNfhb/gpaeF30ZrL8am",
+      "membershipId": "LAB-MGR-002",
+      "department": "Robotics Lab Operations",
+      "academicYear": "Staff",
+      "teamName": "Inventory & Facilities",
+      "role": "INVENTORY_MANAGER",
+      "status": "ACTIVE",
+      "contactNumber": "+91 98765 67890",
+      "createdAt": "2026-10-14T11:02:11.908Z"
+    },
+    {
+      "_id": "usr_1c1tjrdvp",
+      "fullName": "Prof. Ananya Iyer",
+      "email": "admin@robotics.club",
+      "passwordHash": "$2a$10$K4G17iMEjV4dSfCt9Yqntef1nhPZtHcor7jNfhb/gpaeF30ZrL8am",
+      "membershipId": "FAC-ADV-001",
+      "department": "Department of Mechatronics",
+      "academicYear": "Faculty Advisor",
+      "teamName": "Club Leadership",
+      "role": "ADMIN",
+      "status": "ACTIVE",
+      "contactNumber": "+91 98765 99999",
+      "createdAt": "2026-10-14T11:02:11.908Z"
+    },
+    {
+      "_id": "id_0ltl34kmwc6u6ze",
+      "fullName": "MITTAL",
+      "email": "mittalyadav9351@gmail.com",
+      "passwordHash": "$2a$10$70O3hG.4O1bBDHa/oJcXdem4XNDiVFjghGCpkJq3P.FUAqqUSguNu",
+      "membershipId": "ROBO-SNR-2745",
+      "department": "Electronics and communication",
+      "academicYear": "Senior Coordinator",
+      "teamName": "all",
+      "role": "SENIOR",
+      "contactNumber": "91 9351714070",
+      "status": "ACTIVE",
+      "createdAt": "2026-11-11T14:02:05.402Z",
+      "updatedAt": "2026-11-11T14:02:05.403Z"
+    }
+  ],
+  "seniors": [
+    {
+      "_id": "snr_394zkfzmwc5uas4",
+      "fullName": "MITTAL",
+      "phoneNumber": "91 9351714070",
+      "normalizedPhone": "9351714070",
+      "email": "mittalyadav9351@gmail.com",
+      "department": "Electronics and communication",
+      "position": "all",
+      "responsibilities": "microcontrollers",
+      "status": "ACTIVE",
+      "createdAt": "2026-11-11T13:34:10.708Z",
+      "updatedAt": "2026-11-11T14:02:05.405Z",
+      "linkedUserId": "id_0ltl34kmwc6u6ze"
+    }
+  ],
+  "components": [
+    {
+      "_id": "cmp_94rqqpkmj",
+      "componentCode": "CMP-MCU-001",
+      "name": "Arduino Uno",
+      "category": "Microcontrollers",
+      "description": "Standard ATmega328P microcontroller board with 14 digital I/O pins, 6 analog inputs, 16 MHz quartz crystal, USB connection, and power jack.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_ArduinoUno%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_ArduinoUno)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%2300878F%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23006468%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2230%22%20y%3D%2230%22%20width%3D%2230%22%20height%3D%2240%22%20rx%3D%223%22%20fill%3D%22%23cbd5e1%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2235%22%20y%3D%2235%22%20width%3D%2220%22%20height%3D%2230%22%20rx%3D%222%22%20fill%3D%22%2394a3b8%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%2250%22%20r%3D%2214%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2270%22%20width%3D%2280%22%20height%3D%2225%22%20rx%3D%223%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%3Ctext%20x%3D%22110%22%20y%3D%2287%22%20fill%3D%22%23ffffff%22%20font-size%3D%2210%22%20font-family%3D%22monospace%22%20text-anchor%3D%22middle%22%3EATMEGA328P%3C%2Ftext%3E%0A%20%20%20%3Cline%20x1%3D%2230%22%20y1%3D%22120%22%20x2%3D%22170%22%20y2%3D%22120%22%20stroke%3D%22%23fbbf24%22%20stroke-width%3D%224%22%20stroke-dasharray%3D%226%2C4%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EArduino%20Uno%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf",
+      "location": {
+        "rack": "A",
+        "shelf": 1,
+        "box": "02",
+        "coordinates": "(A,1,02)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 5,
+      "availableStock": 5,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 3,
+      "unit": "pcs",
+      "purchasePrice": 12.5,
+      "supplier": "Arduino Official",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Operating Voltage": "5V",
+        "Input Voltage": "7-12V",
+        "Flash Memory": "32 KB",
+        "SRAM": "2 KB"
+      },
+      "createdAt": "2026-10-14T11:02:11.908Z"
+    },
+    {
+      "_id": "cmp_yil0gtwkr",
+      "componentCode": "CMP-SEN-001",
+      "name": "Ultrasonic Sensor",
+      "category": "Sensors",
+      "description": "HC-SR04 ultrasonic distance sensor module providing 2cm to 400cm non-contact measurement with 3mm ranging accuracy.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_UltrasonicSensor%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_UltrasonicSensor)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%231e40af%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%231d4ed8%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%2265%22%20cy%3D%2275%22%20r%3D%2232%22%20fill%3D%22%23cbd5e1%22%20stroke%3D%22%23475569%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2265%22%20cy%3D%2275%22%20r%3D%2222%22%20fill%3D%22%231e293b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2265%22%20cy%3D%2275%22%20r%3D%2212%22%20fill%3D%22%2394a3b8%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22135%22%20cy%3D%2275%22%20r%3D%2232%22%20fill%3D%22%23cbd5e1%22%20stroke%3D%22%23475569%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22135%22%20cy%3D%2275%22%20r%3D%2222%22%20fill%3D%22%231e293b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22135%22%20cy%3D%2275%22%20r%3D%2212%22%20fill%3D%22%2394a3b8%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2285%22%20y%3D%22115%22%20width%3D%2230%22%20height%3D%2220%22%20fill%3D%22%2394a3b8%22%20rx%3D%222%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EUltrasonic%20Sensor%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf",
+      "location": {
+        "rack": "B",
+        "shelf": 2,
+        "box": "03",
+        "coordinates": "(B,2,03)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 10,
+      "availableStock": 10,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 4,
+      "unit": "pcs",
+      "purchasePrice": 2.75,
+      "supplier": "SparkFun",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Range": "2cm - 400cm",
+        "Trigger Input": "10uS TTL pulse",
+        "Echo Output": "TTL level"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_h7b0f3hv7",
+      "componentCode": "CMP-SEN-002",
+      "name": "DHT11 Sensor",
+      "category": "Sensors",
+      "description": "Digital humidity and temperature sensor with calibrated digital signal output for weather stations and environmental monitoring.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_DHT11Sensor%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_DHT11Sensor)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%230284c7%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%230369a1%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2250%22%20y%3D%2230%22%20width%3D%22100%22%20height%3D%2290%22%20rx%3D%228%22%20fill%3D%22%2338bdf8%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2275%22%20cy%3D%2255%22%20r%3D%224%22%20fill%3D%22%230369a1%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%2255%22%20r%3D%224%22%20fill%3D%22%230369a1%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22125%22%20cy%3D%2255%22%20r%3D%224%22%20fill%3D%22%230369a1%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2275%22%20cy%3D%2275%22%20r%3D%224%22%20fill%3D%22%230369a1%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22100%22%20cy%3D%2275%22%20r%3D%224%22%20fill%3D%22%230369a1%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22125%22%20cy%3D%2275%22%20r%3D%224%22%20fill%3D%22%230369a1%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2280%22%20y%3D%22115%22%20width%3D%2240%22%20height%3D%2225%22%20fill%3D%22%23e2e8f0%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EDHT11%20Sensor%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf",
+      "location": {
+        "rack": "B",
+        "shelf": 1,
+        "box": "01",
+        "coordinates": "(B,1,01)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 8,
+      "availableStock": 8,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 3,
+      "unit": "pcs",
+      "purchasePrice": 2.1,
+      "supplier": "Aosong Electronics",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Humidity Range": "20-90% RH",
+        "Temp Range": "0-50°C",
+        "Sampling Period": "1 sec"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_wmz8doyma",
+      "componentCode": "CMP-ACT-001",
+      "name": "Servo Motor",
+      "category": "Actuators",
+      "description": "TowerPro SG90 9g micro servo motor with high output torque (1.8 kg/cm at 4.8V) for robotic arms, steering mechanisms, and grippers.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_ServoMotorSG90%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_ServoMotorSG90)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%232563eb%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%231d4ed8%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2260%22%20y%3D%2245%22%20width%3D%2280%22%20height%3D%2275%22%20rx%3D%226%22%20fill%3D%22%233b82f6%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2285%22%20cy%3D%2240%22%20r%3D%2218%22%20fill%3D%22%23f8fafc%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2280%22%20y%3D%2220%22%20width%3D%2245%22%20height%3D%2212%22%20rx%3D%224%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%2394a3b8%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%22140%22%20y1%3D%22100%22%20x2%3D%22175%22%20y2%3D%22100%22%20stroke%3D%22%23ef4444%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%22140%22%20y1%3D%22106%22%20x2%3D%22175%22%20y2%3D%22106%22%20stroke%3D%22%2392400e%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%22140%22%20y1%3D%22112%22%20x2%3D%22175%22%20y2%3D%22112%22%20stroke%3D%22%23f59e0b%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EServo%20Motor%20SG90%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://components101.com/motors/servo-motor-basics-pinout-datasheet",
+      "location": {
+        "rack": "C",
+        "shelf": 1,
+        "box": "04",
+        "coordinates": "(C,1,04)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 6,
+      "availableStock": 6,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 2,
+      "unit": "pcs",
+      "purchasePrice": 3.5,
+      "supplier": "TowerPro",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Operating Speed": "0.1s/60 degree",
+        "Operating Voltage": "4.8V - 6V",
+        "Weight": "9g"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_9deby43hh",
+      "componentCode": "CMP-PRT-001",
+      "name": "Breadboard",
+      "category": "Passive",
+      "description": "Standard solderless 830-tie-point prototype breadboard with 2 distribution strips and double-sided foam tape on back.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_Breadboard830Point%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_Breadboard830Point)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23f1f5f9%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2225%22%20y%3D%2230%22%20width%3D%22150%22%20height%3D%2290%22%20rx%3D%224%22%20fill%3D%22%23f8fafc%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2235%22%20y1%3D%2245%22%20x2%3D%22165%22%20y2%3D%2245%22%20stroke%3D%22%23ef4444%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2235%22%20y1%3D%2252%22%20x2%3D%22165%22%20y2%3D%2252%22%20stroke%3D%22%233b82f6%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2275%22%20r%3D%222%22%20fill%3D%22%2364748b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2270%22%20cy%3D%2275%22%20r%3D%222%22%20fill%3D%22%2364748b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%2290%22%20cy%3D%2275%22%20r%3D%222%22%20fill%3D%22%2364748b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22110%22%20cy%3D%2275%22%20r%3D%222%22%20fill%3D%22%2364748b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22130%22%20cy%3D%2275%22%20r%3D%222%22%20fill%3D%22%2364748b%22%2F%3E%0A%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%2275%22%20r%3D%222%22%20fill%3D%22%2364748b%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2235%22%20y1%3D%22100%22%20x2%3D%22165%22%20y2%3D%22100%22%20stroke%3D%22%233b82f6%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2235%22%20y1%3D%22107%22%20x2%3D%22165%22%20y2%3D%22107%22%20stroke%3D%22%23ef4444%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EBreadboard%20830%20Point%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://en.wikipedia.org/wiki/Breadboard",
+      "location": {
+        "rack": "A",
+        "shelf": 3,
+        "box": "01",
+        "coordinates": "(A,3,01)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 12,
+      "availableStock": 12,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 5,
+      "unit": "pcs",
+      "purchasePrice": 4.2,
+      "supplier": "ElecRobo",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Points": "830 Tie Points",
+        "Pitch": "2.54mm",
+        "Voltage Rating": "300V / 3A"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_lpnot5n5q",
+      "componentCode": "CMP-WIR-001",
+      "name": "Jumper Wires",
+      "category": "Wires & Others",
+      "description": "40-piece ribbon pack of 20cm male-to-male and male-to-female flexible multicolored DuPont jumper cables.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_JumperWiresPack%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_JumperWiresPack)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%231e293b%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M%2040%20100%20C%2060%2020%2C%20100%2020%2C%20120%20100%22%20stroke%3D%22%23ef4444%22%20stroke-width%3D%225%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M%2050%20100%20C%2070%2030%2C%20110%2030%2C%20130%20100%22%20stroke%3D%22%233b82f6%22%20stroke-width%3D%225%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M%2060%20100%20C%2080%2040%2C%20120%2040%2C%20140%20100%22%20stroke%3D%22%23eab308%22%20stroke-width%3D%225%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M%2070%20100%20C%2090%2050%2C%20130%2050%2C%20150%20100%22%20stroke%3D%22%2310b981%22%20stroke-width%3D%225%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EJumper%20Wires%20Pack%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://en.wikipedia.org/wiki/Jump_wire",
+      "location": {
+        "rack": "C",
+        "shelf": 2,
+        "box": "02",
+        "coordinates": "(C,2,02)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 20,
+      "availableStock": 20,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 8,
+      "unit": "packs",
+      "purchasePrice": 1.8,
+      "supplier": "DuPont Parts",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Length": "20cm",
+        "Wire Gauge": "28 AWG",
+        "Pin Spacing": "2.54mm"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_ryc7f1j22",
+      "componentCode": "CMP-PAS-001",
+      "name": "Resistors (1kΩ)",
+      "category": "Passive",
+      "description": "1k Ohm 1/4W 1% metal film resistors for pull-up circuits, current limiting, voltage dividers and circuit testing.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_Resistors1k%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_Resistors1k)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%23d97706%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23b45309%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Cline%20x1%3D%2220%22%20y1%3D%2275%22%20x2%3D%22180%22%20y2%3D%2275%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2260%22%20y%3D%2260%22%20width%3D%2280%22%20height%3D%2230%22%20rx%3D%2210%22%20fill%3D%22%23fed7aa%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2275%22%20y1%3D%2260%22%20x2%3D%2275%22%20y2%3D%2290%22%20stroke%3D%22%2392400e%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2290%22%20y1%3D%2260%22%20x2%3D%2290%22%20y2%3D%2290%22%20stroke%3D%22%23000000%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%22105%22%20y1%3D%2260%22%20x2%3D%22105%22%20y2%3D%2290%22%20stroke%3D%22%23dc2626%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%22125%22%20y1%3D%2260%22%20x2%3D%22125%22%20y2%3D%2290%22%20stroke%3D%22%23d97706%22%20stroke-width%3D%225%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EResistors%20(1k%CE%A9)%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://en.wikipedia.org/wiki/Resistor",
+      "location": {
+        "rack": "A",
+        "shelf": 2,
+        "box": "03",
+        "coordinates": "(A,2,03)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 50,
+      "availableStock": 50,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 20,
+      "unit": "pcs",
+      "purchasePrice": 0.05,
+      "supplier": "Yageo",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Resistance": "1000 Ohms",
+        "Tolerance": "&plusmn;1%",
+        "Power Rating": "0.25W"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_kuiv7wa22",
+      "componentCode": "CMP-PAS-002",
+      "name": "LED (Red)",
+      "category": "Passive",
+      "description": "5mm diffused round red light emitting diodes (620-625nm) with 2.0V forward voltage and 20mA forward current.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_LEDRed%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_LEDRed)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%23ef4444%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23b91c1c%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Cellipse%20cx%3D%22100%22%20cy%3D%2265%22%20rx%3D%2230%22%20ry%3D%2235%22%20fill%3D%22%23f87171%22%20stroke%3D%22%23dc2626%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2275%22%20y%3D%2285%22%20width%3D%2250%22%20height%3D%2215%22%20rx%3D%224%22%20fill%3D%22%23dc2626%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2290%22%20y1%3D%22100%22%20x2%3D%2290%22%20y2%3D%22140%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%22110%22%20y1%3D%22100%22%20x2%3D%22110%22%20y2%3D%22130%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%223%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3ELED%20(Red)%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+      "location": {
+        "rack": "B",
+        "shelf": 3,
+        "box": "02",
+        "coordinates": "(B,3,02)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 30,
+      "availableStock": 30,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 15,
+      "unit": "pcs",
+      "purchasePrice": 0.1,
+      "supplier": "Kingbright",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Forward Voltage": "2.0V - 2.2V",
+        "Wavelength": "625nm",
+        "Lens": "Diffused Red 5mm"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_hn0q2behi",
+      "componentCode": "CMP-MCU-002",
+      "name": "ESP32 NodeMCU",
+      "category": "Microcontrollers",
+      "description": "Dual-core 240MHz Wi-Fi and Bluetooth BLE microcontroller board with 30 GPIOs, ADC, DAC, SPI, and I2C interfaces.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_ESP32DevModule%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_ESP32DevModule)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%231e293b%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%230f172a%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%2230%22%20width%3D%22120%22%20height%3D%2290%22%20rx%3D%226%22%20fill%3D%22%230f172a%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2260%22%20y%3D%2245%22%20width%3D%2250%22%20height%3D%2240%22%20rx%3D%222%22%20fill%3D%22%2394a3b8%22%2F%3E%0A%20%20%20%3Cpath%20d%3D%22M%20125%2045%20L%20145%2045%20L%20145%2065%20L%20125%2065%20Z%22%20fill%3D%22%23e2e8f0%22%2F%3E%0A%20%20%20%3Cline%20x1%3D%2245%22%20y1%3D%22115%22%20x2%3D%22155%22%20y2%3D%22115%22%20stroke%3D%22%23fbbf24%22%20stroke-width%3D%223%22%20stroke-dasharray%3D%224%2C3%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EESP32%20Dev%20Module%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf",
+      "location": {
+        "rack": "A",
+        "shelf": 1,
+        "box": "04",
+        "coordinates": "(A,1,04)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 7,
+      "availableStock": 7,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 3,
+      "unit": "pcs",
+      "purchasePrice": 6.9,
+      "supplier": "Espressif",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "CPU": "Xtensa Dual-Core 32-bit LX6",
+        "Wireless": "802.11 b/g/n & BT 4.2 BLE"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_4r51x1b10",
+      "componentCode": "CMP-ACT-002",
+      "name": "L298N Motor Driver",
+      "category": "Actuators",
+      "description": "High power dual H-bridge motor driver module capable of driving two DC motors or one 4-wire two-phase stepper motor up to 2A per channel.",
+      "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20300%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%20%20%3Cdefs%3E%0A%20%20%20%20%20%20%3ClinearGradient%20id%3D%22bg_L298NMotorDriver%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ffffff%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23f8fafc%22%2F%3E%0A%20%20%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%20%20%3Cfilter%20id%3D%22shadow%22%20x%3D%22-10%25%22%20y%3D%22-10%25%22%20width%3D%22120%25%22%20height%3D%22120%25%22%3E%0A%20%20%20%20%20%20%20%20%3CfeDropShadow%20dx%3D%220%22%20dy%3D%228%22%20stdDeviation%3D%2212%22%20flood-color%3D%22%23000000%22%20flood-opacity%3D%220.08%22%2F%3E%0A%20%20%20%20%20%20%3C%2Ffilter%3E%0A%20%20%20%20%3C%2Fdefs%3E%0A%20%20%20%20%3Crect%20width%3D%22400%22%20height%3D%22300%22%20fill%3D%22url(%23bg_L298NMotorDriver)%22%2F%3E%0A%20%20%20%20%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%22360%22%20height%3D%22260%22%20rx%3D%2216%22%20fill%3D%22%23ffffff%22%20stroke%3D%22%23e2e8f0%22%20stroke-width%3D%221.5%22%2F%3E%0A%20%20%20%20%3Cg%20filter%3D%22url(%23shadow)%22%20transform%3D%22translate(100%2C%2050)%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22200%22%20height%3D%22150%22%20rx%3D%2212%22%20fill%3D%22%23dc2626%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2215%22%20y%3D%2215%22%20width%3D%22170%22%20height%3D%22120%22%20rx%3D%228%22%20fill%3D%22%23991b1b%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2240%22%20y%3D%2230%22%20width%3D%22120%22%20height%3D%2290%22%20rx%3D%226%22%20fill%3D%22%23b91c1c%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2270%22%20y%3D%2235%22%20width%3D%2260%22%20height%3D%2245%22%20rx%3D%223%22%20fill%3D%22%231e293b%22%2F%3E%0A%20%20%20%3Crect%20x%3D%2245%22%20y%3D%2285%22%20width%3D%2225%22%20height%3D%2225%22%20fill%3D%22%2316a34a%22%2F%3E%0A%20%20%20%3Crect%20x%3D%22130%22%20y%3D%2285%22%20width%3D%2225%22%20height%3D%2225%22%20fill%3D%22%2316a34a%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22245%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2214%22%20font-weight%3D%22600%22%20fill%3D%22%23334155%22%20text-anchor%3D%22middle%22%3EL298N%20Motor%20Driver%3C%2Ftext%3E%0A%20%20%20%20%3Ctext%20x%3D%22200%22%20y%3D%22265%22%20font-family%3D%22system-ui%2C%20sans-serif%22%20font-size%3D%2211%22%20fill%3D%22%2364748b%22%20text-anchor%3D%22middle%22%3ELab%20Tested%20%26bull%3B%20Genuine%20Component%3C%2Ftext%3E%0A%20%20%3C%2Fsvg%3E",
+      "datasheetUrl": "https://www.sparkfun.com/datasheets/Robotics/L298_H_Bridge.pdf",
+      "location": {
+        "rack": "C",
+        "shelf": 1,
+        "box": "02",
+        "coordinates": "(C,1,02)",
+        "room": "Robotics Lab 304"
+      },
+      "totalStock": 9,
+      "availableStock": 9,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 3,
+      "unit": "pcs",
+      "purchasePrice": 4.8,
+      "supplier": "STMicroelectronics",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Drive Voltage": "5V - 35V",
+        "Peak Current": "2A per bridge",
+        "Max Power": "25W"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_cap001",
+      "componentCode": "CMP-PAS-003",
+      "name": "Capacitors Assortment",
+      "category": "Passive",
+      "description": "Electrolytic filtering capacitors (100uF 25V) and 100nF ceramic decoupling capacitors.",
+      "imageUrl": "https://images.unsplash.com/photo-1590959651368-777611976597?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 45,
+      "availableStock": 45,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 10,
+      "unit": "pcs",
+      "purchasePrice": 0.15,
+      "supplier": "Nichicon",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Voltage Rating": "16V - 50V",
+        "Tolerance": "±20%"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_ic001",
+      "componentCode": "CMP-MCU-003",
+      "name": "Integrated Circuits (DIP ICs)",
+      "category": "Microcontrollers",
+      "description": "Standard dual-in-line packaged integrated circuits including NE555 and ATmega328P.",
+      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 18,
+      "availableStock": 18,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 5,
+      "unit": "pcs",
+      "purchasePrice": 1.25,
+      "supplier": "Texas Instruments",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Package": "DIP-8 / DIP-28",
+        "Supply Voltage": "4.5V - 16V"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_mot001",
+      "componentCode": "CMP-ACT-003",
+      "name": "TT Gearbox DC Motor",
+      "category": "Actuators",
+      "description": "High-torque 1:48 gear ratio dual-shaft yellow DC motor for robotics chassis.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 14,
+      "availableStock": 14,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 4,
+      "unit": "pcs",
+      "purchasePrice": 2.5,
+      "supplier": "Adafruit",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Operating Voltage": "3V - 6V DC",
+        "Gear Ratio": "1:48"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_dio001",
+      "componentCode": "CMP-SEM-001",
+      "name": "Diodes",
+      "category": "Semiconductors",
+      "description": "1N4007 / 1N4148 Silicon Rectifier and Switching Diodes for flyback protection.",
+      "imageUrl": "https://images.unsplash.com/photo-1592659762303-90081d14b077?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 60,
+      "availableStock": 60,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 15,
+      "unit": "pcs",
+      "purchasePrice": 0.05,
+      "supplier": "Vishay",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Forward Voltage": "0.7V",
+        "Peak Reverse Voltage": "1000V"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_tra001",
+      "componentCode": "CMP-SEM-002",
+      "name": "Transistors",
+      "category": "Semiconductors",
+      "description": "2N2222 / BC547 NPN Bipolar Junction Transistors for amplification and electronic switching.",
+      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 40,
+      "availableStock": 40,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 10,
+      "unit": "pcs",
+      "purchasePrice": 0.12,
+      "supplier": "ON Semiconductor",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Collector Current": "800mA",
+        "Voltage Rating": "40V"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_rpi001",
+      "componentCode": "CMP-MCU-004",
+      "name": "Raspberry Pi",
+      "category": "Microcontrollers",
+      "description": "Raspberry Pi 4 Model B single-board computer with 4GB RAM, Gigabit Ethernet, and dual 4K micro-HDMI.",
+      "imageUrl": "https://images.unsplash.com/photo-1608555817771-a83d3ec1d948?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 4,
+      "availableStock": 4,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 2,
+      "unit": "pcs",
+      "purchasePrice": 55,
+      "supplier": "Raspberry Pi Foundation",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "CPU": "Broadcom BCM2711 Quad-core 1.5GHz",
+        "RAM": "4GB LPDDR4"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_irs001",
+      "componentCode": "CMP-SEN-003",
+      "name": "IR Sensor",
+      "category": "Sensors",
+      "description": "Infrared line tracker and proximity obstacle sensor module with digital TTL output.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 15,
+      "availableStock": 15,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 4,
+      "unit": "pcs",
+      "purchasePrice": 1.5,
+      "supplier": "SunFounder",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Detection Range": "2cm - 30cm",
+        "Operating Voltage": "3.3V - 5V"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_tmp001",
+      "componentCode": "CMP-SEN-004",
+      "name": "Temperature Sensor",
+      "category": "Sensors",
+      "description": "LM35 precision centigrade analog temperature sensor calibrated directly in Celsius.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 12,
+      "availableStock": 12,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 3,
+      "unit": "pcs",
+      "purchasePrice": 1.2,
+      "supplier": "Texas Instruments",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Scale Factor": "10mV/°C",
+        "Range": "-55°C to +150°C"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_hum001",
+      "componentCode": "CMP-SEN-005",
+      "name": "Humidity Sensor",
+      "category": "Sensors",
+      "description": "Capacitive environmental humidity and moisture detection module.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 10,
+      "availableStock": 10,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 3,
+      "unit": "pcs",
+      "purchasePrice": 2.8,
+      "supplier": "Aosong",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Accuracy": "±2% RH",
+        "Output": "Digital Single-Bus"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_stp001",
+      "componentCode": "CMP-ACT-004",
+      "name": "Stepper Motor",
+      "category": "Motors",
+      "description": "28BYJ-48 5V geared 4-phase unipolar stepper motor with ULN2003 driver board.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 8,
+      "availableStock": 8,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 2,
+      "unit": "pcs",
+      "purchasePrice": 4.5,
+      "supplier": "Kysan",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Step Angle": "5.625° / 64",
+        "Voltage": "5V DC"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_usb001",
+      "componentCode": "CMP-CAB-001",
+      "name": "USB Cables",
+      "category": "Cables",
+      "description": "Shielded USB-A to USB-B and USB-C data and programming transfer cables (1.5m).",
+      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 25,
+      "availableStock": 25,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 5,
+      "unit": "pcs",
+      "purchasePrice": 2,
+      "supplier": "CableCreation",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Length": "1.5m",
+        "Interface": "USB 2.0 / USB-C"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_pow001",
+      "componentCode": "CMP-CAB-002",
+      "name": "Power Cables",
+      "category": "Cables",
+      "description": "Heavy-duty 14 AWG silicone DC power cables with XT60 connectors and barrel jacks.",
+      "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 20,
+      "availableStock": 20,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 5,
+      "unit": "pcs",
+      "purchasePrice": 2.5,
+      "supplier": "Amass",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Gauge": "14 AWG Silicone",
+        "Rating": "60A Continuous"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_mul001",
+      "componentCode": "CMP-EQP-001",
+      "name": "Multimeter",
+      "category": "Equipment",
+      "description": "Digital handheld auto-ranging multimeter with test leads, continuity buzzer, and backlit LCD.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 6,
+      "availableStock": 6,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 2,
+      "unit": "pcs",
+      "purchasePrice": 28,
+      "supplier": "UNI-T",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Voltage Max": "600V AC/DC",
+        "Current Max": "10A"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_tls001",
+      "componentCode": "CMP-EQP-002",
+      "name": "Electronic Tools",
+      "category": "Equipment",
+      "description": "Precision electronics tool kit containing wire strippers, flush cutters, anti-static tweezers, and bit drivers.",
+      "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 5,
+      "availableStock": 5,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 2,
+      "unit": "sets",
+      "purchasePrice": 32,
+      "supplier": "iFixit / ProsKit",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Pieces": "38-Piece Tool Set",
+        "ESD Safe": "Yes"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_pcb001",
+      "componentCode": "CMP-EQP-003",
+      "name": "PCBs",
+      "category": "Equipment",
+      "description": "Double-sided FR4 copper clad prototyping printed circuit boards (5x7cm and 7x9cm).",
+      "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 35,
+      "availableStock": 35,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 10,
+      "unit": "pcs",
+      "purchasePrice": 0.8,
+      "supplier": "JLCPCB",
+      "isConsumable": true,
+      "technicalSpecs": {
+        "Substrate": "FR4 Epoxy Glass",
+        "Thickness": "1.6mm"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "cmp_kit001",
+      "componentCode": "CMP-EQP-004",
+      "name": "Project Kits",
+      "category": "Equipment",
+      "description": "Robotics Club comprehensive beginner-to-advanced project module kit with chassis and sensors.",
+      "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80",
+      "datasheetUrl": "",
+      "totalStock": 8,
+      "availableStock": 8,
+      "reservedStock": 0,
+      "issuedStock": 0,
+      "damagedStock": 0,
+      "minThreshold": 2,
+      "unit": "kits",
+      "purchasePrice": 45,
+      "supplier": "RoboStock Official",
+      "isConsumable": false,
+      "technicalSpecs": {
+        "Modules": "25+ Components Included",
+        "Storage Case": "Transparent Hard Shell"
+      },
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    }
+  ],
+  "requests": [
+    {
+      "_id": "req_kvw7vqo0p",
+      "requestCode": "REQ-2026-001",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "RoboWars 15kg Combat Bot \"Titan\"",
+      "projectPurpose": "Testing PWM weapon servo linkages and ultrasonic collision avoidance prototype for Titan.",
+      "seniorContact": "+91 98765 43210",
+      "seniorApprover": "usr_3f92szsxk",
+      "seniorApproverName": "Aryan Sharma",
+      "items": [
+        {
+          "component": "cmp_94rqqpkmj",
+          "componentName": "Arduino Uno",
+          "componentCode": "CMP-MCU-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 1,
+          "issuedQuantity": 1,
+          "returnedQuantity": 0,
+          "itemStatus": "ISSUED"
+        },
+        {
+          "component": "cmp_yil0gtwkr",
+          "componentName": "Ultrasonic Sensor",
+          "componentCode": "CMP-SEN-001",
+          "requestedQuantity": 2,
+          "approvedQuantity": 2,
+          "issuedQuantity": 2,
+          "returnedQuantity": 0,
+          "itemStatus": "ISSUED"
+        }
+      ],
+      "status": "OVERDUE",
+      "expectedPickupDate": "2026-10-10T11:02:11.909Z",
+      "expectedReturnDate": "2026-10-17T11:02:11.909Z",
+      "actualPickupDate": "2026-10-10T11:02:11.909Z",
+      "notes": "Approved for Titan prototype testing in Arena 2.",
+      "approvalHistory": [
+        {
+          "approver": "usr_3f92szsxk",
+          "approverName": "Aryan Sharma",
+          "action": "APPROVED",
+          "comments": "Approved. Please handle ultrasonic transducers with care.",
+          "timestamp": "2026-10-10T11:02:11.909Z"
+        }
+      ],
+      "createdAt": "2026-10-14T11:02:11.909Z",
+      "updatedAt": "2026-11-13T08:07:27.128Z"
+    },
+    {
+      "_id": "req_mcydd6juu",
+      "requestCode": "REQ-2026-002",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "Autonomous Maze Solver & Line Follower",
+      "projectPurpose": "Motor drive testing for line follower prototype.",
+      "seniorContact": "+91 98765 43210",
+      "seniorApprover": "usr_3f92szsxk",
+      "seniorApproverName": "Aryan Sharma",
+      "items": [
+        {
+          "component": "cmp_wmz8doyma",
+          "componentName": "Servo Motor",
+          "componentCode": "CMP-ACT-001",
+          "requestedQuantity": 2,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        },
+        {
+          "component": "cmp_9deby43hh",
+          "componentName": "Breadboard",
+          "componentCode": "CMP-PRT-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-10-15T11:02:11.909Z",
+      "expectedReturnDate": "2026-10-22T11:02:11.909Z",
+      "notes": "Need this to assemble motor driver test bench.",
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "id_x82qix2mw97ft9e",
+      "requestCode": "REQ-2026-003",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "RoboWars 15kg Combat Bot \"Titan\"",
+      "projectPurpose": "Testing and integration for DHT11 Temp & Humidity Sensor in club prototype.",
+      "seniorContact": "+91 98765 43210",
+      "seniorApprover": "usr_3f92szsxk",
+      "seniorApproverName": "Aryan Sharma",
+      "items": [
+        {
+          "component": "cmp_yil0gtwkr",
+          "componentName": "Ultrasonic Sensor",
+          "componentCode": "CMP-SEN-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-11-09T11:55:35.372Z",
+      "expectedReturnDate": "2026-11-16T00:00:00.000Z",
+      "notes": "Requested by Mittal via Storage Almirah Hub.",
+      "approvalHistory": [],
+      "createdAt": "2026-11-09T11:55:35.522Z",
+      "updatedAt": "2026-11-09T11:55:35.522Z"
+    },
+    {
+      "_id": "id_s1zp9odmwc5w9l6",
+      "requestCode": "REQ-2026-004",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "RoboWars 15kg Combat Bot \"Titan\"",
+      "projectPurpose": "Testing and integration for Ultrasonic Sensor in club prototype.",
+      "seniorContact": "91 9351714070",
+      "seniorApprover": "snr_394zkfzmwc5uas4",
+      "seniorApproverName": "MITTAL",
+      "seniorDepartment": "Electronics and communication",
+      "seniorPosition": "hardware head",
+      "items": [
+        {
+          "component": "cmp_94rqqpkmj",
+          "componentName": "Arduino Uno",
+          "componentCode": "CMP-MCU-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-11-11T13:35:42.473Z",
+      "expectedReturnDate": "2026-11-18T00:00:00.000Z",
+      "notes": "Requested by Mittal (91 9351714070) via Storage Almirah Hub.",
+      "approvalHistory": [],
+      "createdAt": "2026-11-11T13:35:42.474Z",
+      "updatedAt": "2026-11-11T13:35:42.475Z"
+    },
+    {
+      "_id": "id_jeyfnr9mwc6f7p4",
+      "requestCode": "REQ-2026-005",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "RoboWars 15kg Combat Bot \"Titan\"",
+      "projectPurpose": "Testing and integration for Ultrasonic Sensor in club prototype.",
+      "seniorContact": "91 9351714070",
+      "seniorApprover": "snr_394zkfzmwc5uas4",
+      "seniorApproverName": "MITTAL",
+      "seniorDepartment": "Electronics and communication",
+      "seniorPosition": "all",
+      "items": [
+        {
+          "component": "cmp_yil0gtwkr",
+          "componentName": "Ultrasonic Sensor",
+          "componentCode": "CMP-SEN-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-11-11T13:50:26.395Z",
+      "expectedReturnDate": "2026-11-18T00:00:00.000Z",
+      "notes": "Requested by Mittal (91 9351714070) via Storage Almirah Hub.",
+      "approvalHistory": [],
+      "createdAt": "2026-11-11T13:50:26.488Z",
+      "updatedAt": "2026-11-11T13:50:26.488Z"
+    },
+    {
+      "_id": "id_pdvtbwqmwc6h5b4",
+      "requestCode": "REQ-2026-006",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "RoboWars 15kg Combat Bot \"Titan\"",
+      "projectPurpose": "Testing and integration for Ultrasonic Sensor in club prototype.",
+      "seniorContact": "91 9351714070",
+      "seniorApprover": "snr_394zkfzmwc5uas4",
+      "seniorApproverName": "MITTAL",
+      "seniorDepartment": "Electronics and communication",
+      "seniorPosition": "all",
+      "items": [
+        {
+          "component": "cmp_yil0gtwkr",
+          "componentName": "Ultrasonic Sensor",
+          "componentCode": "CMP-SEN-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        },
+        {
+          "component": "cmp_94rqqpkmj",
+          "componentName": "Arduino Uno",
+          "componentCode": "CMP-MCU-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-11-11T13:51:56.703Z",
+      "expectedReturnDate": "2026-11-18T00:00:00.000Z",
+      "notes": "Requested by Mittal (91 9351714070) via Storage Almirah Hub.",
+      "approvalHistory": [],
+      "createdAt": "2026-11-11T13:51:56.704Z",
+      "updatedAt": "2026-11-11T13:51:56.704Z"
+    },
+    {
+      "_id": "id_i94l0d0mwep4o0m",
+      "requestCode": "REQ-2026-007",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userEmail": "mittal@robotics.club",
+      "projectName": "RoboWars 15kg Combat Bot \"Titan\"",
+      "projectPurpose": "Testing and integration for Ultrasonic Sensor in club prototype.",
+      "seniorContact": "91 9351714070",
+      "seniorApprover": "snr_394zkfzmwc5uas4",
+      "seniorApproverName": "MITTAL",
+      "seniorDepartment": "Electronics and communication",
+      "seniorPosition": "all",
+      "items": [
+        {
+          "component": "cmp_yil0gtwkr",
+          "componentName": "Ultrasonic Sensor",
+          "componentCode": "CMP-SEN-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-11-13T08:09:39.371Z",
+      "expectedReturnDate": "2026-11-20T00:00:00.000Z",
+      "notes": "Requested by Mittal (91 9351714070) via Storage Almirah Hub.",
+      "approvalHistory": [],
+      "createdAt": "2026-11-13T08:09:39.478Z",
+      "updatedAt": "2026-11-13T08:09:39.478Z"
+    }
+  ],
+  "transactions": [],
+  "projects": [
+    {
+      "_id": "prj_7yxw3ws2h",
+      "title": "RoboWars 15kg Combat Bot \"Titan\"",
+      "description": "Pneumatic flipper combat robot equipped with dual brushless drive motors and steel wedge armour for annual national robowar championship.",
+      "lead": "usr_k0t3ualtx",
+      "leadName": "Mittal",
+      "teamMembers": [
+        "Mittal",
+        "Aryan Sharma",
+        "Rohan Sharma",
+        "Pooja Iyer"
+      ],
+      "category": "Combat Robotics",
+      "status": "IN_PROGRESS",
+      "allocatedComponents": [
+        {
+          "component": "cmp_94rqqpkmj",
+          "componentName": "Arduino Uno",
+          "quantity": 1
+        },
+        {
+          "component": "cmp_wmz8doyma",
+          "componentName": "Servo Motor",
+          "quantity": 2
+        }
+      ],
+      "startDate": "2026-09-29T11:02:11.909Z",
+      "targetCompletionDate": "2026-11-28T11:02:11.909Z",
+      "completionChecklist": [
+        {
+          "task": "Chassis laser cutting and welding",
+          "completed": true
+        },
+        {
+          "task": "Drive ESC wiring and calibration",
+          "completed": true
+        },
+        {
+          "task": "Weapon pneumatic actuator testing",
+          "completed": false
+        },
+        {
+          "task": "Fail-safe radio link verification",
+          "completed": false
+        }
+      ],
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "prj_qzeso37g5",
+      "title": "Autonomous Maze Solver & Line Follower",
+      "description": "High-speed differential drive robot featuring PID algorithm, ultrasonic sensors, and IR array for RoboCup Maze Challenge.",
+      "lead": "usr_3f92szsxk",
+      "leadName": "Aryan Sharma",
+      "teamMembers": [
+        "Aryan Sharma",
+        "Devansh Gupta",
+        "Tanvi Mehta"
+      ],
+      "category": "Autonomous Mobile Robotics",
+      "status": "PLANNING",
+      "allocatedComponents": [
+        {
+          "component": "cmp_yil0gtwkr",
+          "componentName": "Ultrasonic Sensor",
+          "quantity": 3
+        }
+      ],
+      "startDate": "2026-10-09T11:02:11.909Z",
+      "targetCompletionDate": "2026-12-13T11:02:11.909Z",
+      "completionChecklist": [
+        {
+          "task": "Sensor array PCB layout",
+          "completed": true
+        },
+        {
+          "task": "Microcontroller selection",
+          "completed": true
+        },
+        {
+          "task": "Motor speed tuning",
+          "completed": false
+        }
+      ],
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    }
+  ],
+  "maintenance": [],
+  "notifications": [
+    {
+      "_id": "notif_7l0sbz0hq",
+      "user": "usr_k0t3ualtx",
+      "title": "Components Ready for Pickup",
+      "message": "Your request REQ-2026-001 has been issued by Lab Manager. Return date: in 3 days.",
+      "link": "/my-requests",
+      "type": "SUCCESS",
+      "isRead": false,
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "notif_qnix6mlq2",
+      "user": "usr_3f92szsxk",
+      "userRole": "SENIOR",
+      "title": "New Request Awaiting Review",
+      "message": "Mittal submitted REQ-2026-002 for Maze Solver project.",
+      "link": "/approvals",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-10-14T11:02:11.909Z"
+    },
+    {
+      "_id": "id_snl7zdymw97ft9k",
+      "user": "usr_3f92szsxk",
+      "userRole": "SENIOR",
+      "title": "New Component Request Awaiting Approval",
+      "message": "Mittal submitted REQ-2026-003 for project \"RoboWars 15kg Combat Bot \"Titan\"\".",
+      "link": "/approvals?id=id_x82qix2mw97ft9e",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-11-09T11:55:35.528Z"
+    },
+    {
+      "_id": "id_co7pmwsmwc5w9lb",
+      "user": "snr_394zkfzmwc5uas4",
+      "userRole": "SENIOR",
+      "title": "New Component Request for MITTAL",
+      "message": "Mittal requested Arduino Uno (REQ-2026-004).",
+      "link": "/approvals?id=id_s1zp9odmwc5w9l6",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-11-11T13:35:42.479Z"
+    },
+    {
+      "_id": "id_rejqivmmwc6f7p7",
+      "user": "snr_394zkfzmwc5uas4",
+      "userRole": "SENIOR",
+      "title": "New Component Request for MITTAL",
+      "message": "Mittal requested Ultrasonic Sensor (REQ-2026-005).",
+      "link": "/approvals?id=id_jeyfnr9mwc6f7p4",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-11-11T13:50:26.491Z"
+    },
+    {
+      "_id": "id_9sufjfcmwc6h5b8",
+      "user": "snr_394zkfzmwc5uas4",
+      "userRole": "SENIOR",
+      "title": "New Component Request for MITTAL",
+      "message": "Mittal requested Ultrasonic Sensor, Arduino Uno (REQ-2026-006).",
+      "link": "/approvals?id=id_pdvtbwqmwc6h5b4",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-11-11T13:51:56.708Z"
+    },
+    {
+      "_id": "id_pt4f93bmwep1u1g",
+      "user": "usr_k0t3ualtx",
+      "title": "Component Return Overdue",
+      "message": "Request REQ-2026-001 (\"RoboWars 15kg Combat Bot \"Titan\"\") was due on 17/10/2026. Please return components to Lab 304 immediately.",
+      "link": "/my-requests?id=req_kvw7vqo0p",
+      "type": "DANGER",
+      "isRead": false,
+      "createdAt": "2026-11-13T08:07:27.316Z"
+    },
+    {
+      "_id": "id_tx01gkqmwep4o0p",
+      "user": "id_0ltl34kmwc6u6ze",
+      "userRole": "SENIOR",
+      "title": "New Component Request for MITTAL",
+      "message": "Mittal requested Ultrasonic Sensor (REQ-2026-007).",
+      "link": "/approvals?id=id_i94l0d0mwep4o0m",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-11-13T08:09:39.481Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "_id": "id_7is9tv0mw97ft9n",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "REQUEST_SUBMITTED",
+      "entityType": "REQUEST",
+      "entityId": "id_x82qix2mw97ft9e",
+      "details": {
+        "requestCode": "REQ-2026-003",
+        "itemsCount": 1
+      },
+      "timestamp": "2026-11-09T11:55:35.531Z"
+    },
+    {
+      "_id": "id_5rr3dysmwbrzd6a",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "SENIOR_CREATED",
+      "entityType": "SENIOR",
+      "entityId": "snr_5owljobmwbrzd67",
+      "details": {
+        "fullName": "MITTAL",
+        "department": "ECE",
+        "position": "hardware lead"
+      },
+      "timestamp": "2026-11-11T07:06:12.466Z"
+    },
+    {
+      "_id": "id_hmy1wz4mwc5u84v",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "SENIOR_DELETED",
+      "entityType": "SENIOR",
+      "entityId": "snr_5owljobmwbrzd67",
+      "details": {
+        "fullName": "MITTAL"
+      },
+      "timestamp": "2026-11-11T13:34:07.279Z"
+    },
+    {
+      "_id": "id_hohoe8vmwc5uas6",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "SENIOR_CREATED",
+      "entityType": "SENIOR",
+      "entityId": "snr_394zkfzmwc5uas4",
+      "details": {
+        "fullName": "MITTAL",
+        "department": "Electronics and communication",
+        "position": "hardware head"
+      },
+      "timestamp": "2026-11-11T13:34:10.710Z"
+    },
+    {
+      "_id": "id_8nfmygzmwc5w9lh",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "REQUEST_SUBMITTED",
+      "entityType": "REQUEST",
+      "entityId": "id_s1zp9odmwc5w9l6",
+      "details": {
+        "requestCode": "REQ-2026-004",
+        "itemsCount": 1
+      },
+      "timestamp": "2026-11-11T13:35:42.485Z"
+    },
+    {
+      "_id": "id_6jzy6qimwc68jej",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "SENIOR_UPDATED",
+      "entityType": "SENIOR",
+      "entityId": "snr_394zkfzmwc5uas4",
+      "details": {
+        "fullName": "MITTAL",
+        "department": "Electronics and communication"
+      },
+      "timestamp": "2026-11-11T13:45:15.067Z"
+    },
+    {
+      "_id": "id_2iwf53lmwc6f7pa",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "REQUEST_SUBMITTED",
+      "entityType": "REQUEST",
+      "entityId": "id_jeyfnr9mwc6f7p4",
+      "details": {
+        "requestCode": "REQ-2026-005",
+        "itemsCount": 1
+      },
+      "timestamp": "2026-11-11T13:50:26.494Z"
+    },
+    {
+      "_id": "id_t5v4nytmwc6h5bb",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "REQUEST_SUBMITTED",
+      "entityType": "REQUEST",
+      "entityId": "id_pdvtbwqmwc6h5b4",
+      "details": {
+        "requestCode": "REQ-2026-006",
+        "itemsCount": 2
+      },
+      "timestamp": "2026-11-11T13:51:56.711Z"
+    },
+    {
+      "_id": "id_ao2j8atmwep4o0t",
+      "user": "usr_k0t3ualtx",
+      "userName": "Mittal",
+      "userRole": "MEMBER",
+      "action": "REQUEST_SUBMITTED",
+      "entityType": "REQUEST",
+      "entityId": "id_i94l0d0mwep4o0m",
+      "details": {
+        "requestCode": "REQ-2026-007",
+        "itemsCount": 1
+      },
+      "timestamp": "2026-11-13T08:09:39.485Z"
+    }
+  ]
+}
