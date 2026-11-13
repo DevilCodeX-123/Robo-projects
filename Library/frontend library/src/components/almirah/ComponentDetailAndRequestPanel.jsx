@@ -43,7 +43,7 @@ export const ComponentDetailAndRequestPanel = ({
   const [loadingSeniors, setLoadingSeniors] = useState(true);
 
   // Form State
-  const [studentName, setStudentName] = useState(user?.fullName || 'Mittal');
+  const [studentName, setStudentName] = useState(user?.fullName || 'Student');
   const [selectedProject, setSelectedProject] = useState(DEMO_PROJECTS[0] || 'Autonomous Maze Solving Robot');
   const [projectPurpose, setProjectPurpose] = useState('');
   const [selectedSeniorId, setSelectedSeniorId] = useState('');

@@ -276,11 +276,11 @@ export const Navbar = ({
                 className="flex items-center space-x-2.5 p-1.5 rounded-lg hover:bg-slate-800/80 transition-colors text-left"
               >
                 <div className="w-8 h-8 rounded-full bg-slate-700 border border-slate-600 flex items-center justify-center text-white text-sm font-semibold">
-                  {user?.fullName?.charAt(0) || 'M'}
+                  {user?.fullName?.charAt(0) || 'U'}
                 </div>
                 <div className="hidden sm:block">
                   <div className="text-white text-xs font-semibold leading-tight">
-                    {user?.fullName || 'Mittal'}
+                    {user?.fullName || 'User'}
                   </div>
                   <div className="text-[10px] text-slate-400 leading-tight">
                     {roleInfo.label}

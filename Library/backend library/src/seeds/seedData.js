@@ -186,8 +186,8 @@ export const seedDatabase = async () => {
   // 3. Seed Users
   const userSeedData = [
     {
-      fullName: 'Mittal',
-      email: 'mittal@robotics.club',
+      fullName: 'Aarav Sharma',
+      email: 'student@robotics.club',
       passwordHash,
       membershipId: 'ROBO-2026-042',
       department: 'Robotics & Automation',
@@ -628,7 +628,7 @@ export const seedDatabase = async () => {
       user: seniorUser._id || seniorUser.id,
       userRole: 'SENIOR',
       title: 'New Request Awaiting Review',
-      message: 'Mittal submitted REQ-2026-002 for Maze Solver project.',
+      message: 'Aarav Sharma submitted REQ-2026-002 for Maze Solver project.',
       link: '/approvals',
       type: 'INFO'
     }

@@ -32,7 +32,7 @@ export const UserProfileModal = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen && user) {
       setFormData({
-        fullName: user.fullName || 'Mittal',
+        fullName: user.fullName || 'User',
         email: user.email || '',
         membershipId: user.membershipId || '',
         department: user.department || '',
@@ -92,7 +92,7 @@ export const UserProfileModal = ({ isOpen, onClose }) => {
                 <span>{role || 'MEMBER'}</span>
               </div>
               <h2 className="text-xl font-black leading-tight text-white">
-                {user?.fullName || 'Mittal'}
+                {user?.fullName || 'User'}
               </h2>
               <p className="text-xs text-slate-400 font-mono mt-0.5">
                 ID: {user?.membershipId || 'Not set'}

@@ -73,7 +73,7 @@ You can log in with any of these accounts or use the **Quick Role Switcher** in 
 
 | Role | Name | Email | Password | Membership ID |
 | :--- | :--- | :--- | :--- | :--- |
-| **Student / Member** | Mittal Patel | `mittal@robotics.club` | `password123` | `ROBO-2026-042` |
+| **Student / Member** | Aarav Sharma | `student@robotics.club` | `password123` | `ROBO-2026-042` |
 | **Senior Approver** | Aryan Sharma | `aryan@robotics.club` | `password123` | `ROBO-2025-011` |
 | **Inventory Manager** | Dr. Rajesh Verma | `manager@robotics.club` | `password123` | `LAB-MGR-002` |
 | **Administrator** | Prof. Ananya Iyer | `admin@robotics.club` | `password123` | `FAC-ADV-001` |

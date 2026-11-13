@@ -150,7 +150,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                       required
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      placeholder="e.g. Mittal"
+                      placeholder="e.g. Rahul Sharma"
                       className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
                     />
                   </div>

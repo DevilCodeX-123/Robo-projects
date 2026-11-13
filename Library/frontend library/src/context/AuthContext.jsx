@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
         const accounts = await refreshDemoAccounts();
         const explicitLoggedOut = sessionStorage.getItem('robo_logged_out') === '1';
 
-        // If no user is logged in and user didn't explicitly log out, default to the Student account (Mittal)
+        // If no user is logged in and user didn't explicitly log out, default to student demo account
         if (!localStorage.getItem('robo_token') && !explicitLoggedOut && accounts.length > 0) {
           const studentDemo = accounts.find(a => String(a.role || '').toUpperCase() === 'MEMBER') || accounts[0];
           localStorage.setItem('robo_token', studentDemo.token);

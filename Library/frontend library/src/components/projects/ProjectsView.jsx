@@ -203,7 +203,7 @@ export const ProjectsView = () => {
                   type="text"
                   value={newProject.teamMembers}
                   onChange={(e) => setNewProject({ ...newProject, teamMembers: e.target.value })}
-                  placeholder="Mittal, Aryan Sharma, Dr. Verma"
+                  placeholder="Aarav Sharma, Aryan Sharma, Dr. Verma"
                   className="w-full p-2.5 border rounded-xl"
                 />
               </div>
