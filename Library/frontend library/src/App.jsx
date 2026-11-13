@@ -587,9 +587,8 @@ export function App() {
         allowDismiss={Boolean(user)}
         onAuthSuccess={(loggedUser) => {
           const r = String(loggedUser?.role || '').toUpperCase();
-          if (r === 'SENIOR' || r === 'ADMIN') setCurrentView('management-dashboard');
-          else if (r === 'INVENTORY_MANAGER') setCurrentView('inventory-portal');
-          else if (['management-dashboard', 'senior-portal', 'admin-portal'].includes(currentView)) setCurrentView('home');
+          if (r === 'ADMIN' || r === 'SENIOR') setCurrentView('management-dashboard');
+          else setCurrentView('dashboard');
         }}
       />
 

@@ -267,10 +267,9 @@ export const getDemoAccounts = async (req, res) => {
     const seen = new Set();
     const demoAccounts = [];
 
-    for (const targetRole of ['MEMBER', 'SENIOR', 'INVENTORY_MANAGER', 'ADMIN']) {
-      const matches = targetRole === 'SENIOR'
-        ? users.filter(u => u.role === 'SENIOR' && u.status !== 'SUSPENDED')
-        : users.filter(u => u.role === targetRole && u.status !== 'SUSPENDED').slice(0, 1);
+    // Two primary roles: Student (MEMBER) and Admin (ADMIN)
+    for (const targetRole of ['MEMBER', 'ADMIN']) {
+      const matches = users.filter(u => u.role === targetRole && u.status !== 'SUSPENDED').slice(0, 1);
 
       for (const u of matches) {
         const uid = String(u._id || u.id);

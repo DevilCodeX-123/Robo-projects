@@ -486,10 +486,10 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
             <span>Robotics Club Central Administration &bull; Lab 304</span>
           </div>
           <h1 className="text-2xl sm:text-3xl font-black tracking-tight">
-            Management Dashboard
+            Admin Dashboard
           </h1>
           <p className="text-xs text-slate-300 mt-1 max-w-2xl">
-            Unified operations console for Senior Coordinators and Club Administrators. Manage inventory, process student requests, issue components, and maintain leadership records.
+            Administrative console for Robotics Lab leadership and seniors. Manage component inventory &amp; stock, review student requests, issue parts, and manage student and senior records.
           </p>
 
           <div className="flex flex-wrap items-center gap-2 mt-4">
@@ -499,7 +499,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                 : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
             }`}>
               {isAdmin ? <ShieldAlert className="w-3.5 h-3.5" /> : <UserCheck className="w-3.5 h-3.5" />}
-              <span>{isAdmin ? 'System Administrator' : 'Senior Coordinator'}</span>
+              <span>{isAdmin ? 'System Administrator' : 'Senior Admin'}</span>
             </span>
             <span className="text-xs text-slate-400 font-mono">
               Signed in as: <strong className="text-white">{user?.fullName || 'Manager'}</strong>

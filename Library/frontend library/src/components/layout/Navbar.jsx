@@ -43,17 +43,11 @@ export const Navbar = ({
   };
 
   const getRoleBadge = (userRole) => {
-    switch (userRole) {
-      case 'SENIOR':
-        return { label: 'Senior Approver', color: 'bg-amber-500/20 text-amber-300 border-amber-500/30' };
-      case 'INVENTORY_MANAGER':
-        return { label: 'Lab Manager', color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' };
-      case 'ADMIN':
-        return { label: 'Administrator', color: 'bg-purple-500/20 text-purple-300 border-purple-500/30' };
-      case 'MEMBER':
-      default:
-        return { label: 'Student', color: 'bg-blue-500/20 text-blue-300 border-blue-500/30' };
+    const r = String(userRole || '').toUpperCase();
+    if (r === 'ADMIN' || r === 'SENIOR') {
+      return { label: 'Admin', color: 'bg-purple-500/20 text-purple-300 border-purple-500/30' };
     }
+    return { label: 'Student', color: 'bg-blue-500/20 text-blue-300 border-blue-500/30' };
   };
 
   const roleInfo = getRoleBadge(role);
@@ -170,25 +164,23 @@ export const Navbar = ({
               )}
             </button>
 
-            {/* Role-Specific Portal Button */}
+            {/* Two Primary Panels: Student Dashboard or Admin Dashboard */}
             <button
               onClick={() => {
-                if (role === 'SENIOR' || role === 'ADMIN') setCurrentView('management-dashboard');
-                else if (role === 'INVENTORY_MANAGER') setCurrentView('inventory-portal');
+                if (role === 'ADMIN' || role === 'SENIOR') setCurrentView('management-dashboard');
                 else setCurrentView('dashboard');
               }}
               className={`flex items-center space-x-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-colors relative ${
-                ['dashboard', 'management-dashboard', 'senior-portal', 'admin-portal', 'inventory-portal'].includes(currentView)
+                ['dashboard', 'management-dashboard'].includes(currentView)
                   ? 'text-white bg-slate-800/60 font-bold'
                   : 'text-slate-300 hover:text-white hover:bg-slate-800/40'
               }`}
             >
               <LayoutDashboard className="w-3.5 h-3.5 text-blue-400" />
               <span>
-                {role === 'SENIOR' || role === 'ADMIN' ? 'Management Dashboard' :
-                 role === 'INVENTORY_MANAGER' ? 'Inventory Manager' : 'Student Dashboard'}
+                {role === 'ADMIN' || role === 'SENIOR' ? 'Admin Dashboard' : 'Student Dashboard'}
               </span>
-              {['dashboard', 'management-dashboard', 'senior-portal', 'admin-portal', 'inventory-portal'].includes(currentView) && (
+              {['dashboard', 'management-dashboard'].includes(currentView) && (
                 <span className="absolute bottom-0 left-2 right-2 h-0.5 bg-blue-500 rounded-full" />
               )}
             </button>
@@ -320,20 +312,19 @@ export const Navbar = ({
                     </button>
                   </div>
 
-                  {/* Instant Demo Role Switcher */}
+                  {/* Quick Switcher: Student & Admin Panels */}
                   <div className="px-3 py-2 bg-slate-50">
                     <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">
-                      ⚡ Quick Role Switcher (Live Demo)
+                      ⚡ Switch Panel (Student / Admin)
                     </p>
                     <div className="space-y-1 max-h-48 overflow-y-auto">
-                      {demoAccounts.map(account => (
+                      {demoAccounts.filter(a => ['MEMBER', 'ADMIN'].includes(a.role)).map(account => (
                         <button
                           key={account.id || account.role}
                           onClick={() => {
                             switchRole(account.id || account.role);
                             setIsDropdownOpen(false);
-                            if (account.role === 'SENIOR' || account.role === 'ADMIN') setCurrentView('management-dashboard');
-                            else if (account.role === 'INVENTORY_MANAGER') setCurrentView('inventory-portal');
+                            if (account.role === 'ADMIN' || account.role === 'SENIOR') setCurrentView('management-dashboard');
                             else setCurrentView('dashboard');
                           }}
                           className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
@@ -343,16 +334,11 @@ export const Navbar = ({
                           }`}
                         >
                           <div className="flex items-center space-x-2">
-                            {account.role === 'MEMBER' && <Bot className="w-3.5 h-3.5" />}
-                            {account.role === 'SENIOR' && <UserCheck className="w-3.5 h-3.5" />}
-                            {account.role === 'INVENTORY_MANAGER' && <Wrench className="w-3.5 h-3.5" />}
-                            {account.role === 'ADMIN' && <ShieldCheck className="w-3.5 h-3.5" />}
+                            {account.role === 'MEMBER' ? <Bot className="w-3.5 h-3.5" /> : <ShieldCheck className="w-3.5 h-3.5" />}
                             <span>{account.fullName}</span>
                           </div>
                           <span className={`text-[10px] uppercase font-mono ${(user?.id || user?._id) === account.id ? 'text-blue-100' : 'text-slate-400'}`}>
-                            {account.role === 'MEMBER' ? 'Student' :
-                             account.role === 'SENIOR' ? 'Senior' :
-                             account.role === 'INVENTORY_MANAGER' ? 'Manager' : 'Admin'}
+                            {account.role === 'MEMBER' ? 'Student' : 'Admin'}
                           </span>
                         </button>
                       ))}

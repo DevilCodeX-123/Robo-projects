@@ -65,27 +65,17 @@ export const LeftSidebar = ({
     }
   ];
 
-  // Portals & Admin Sections (Unified Management Dashboard for Admin & Senior)
+  // Admin Panel (Only two panels in system: Student & Admin)
   const isManagementRole = role === 'ADMIN' || role === 'SENIOR';
   const portalItems = [];
 
   if (isManagementRole) {
     portalItems.push({
       id: 'management-dashboard',
-      label: 'Management Dashboard',
-      badge: role === 'ADMIN' ? 'Admin' : 'Senior',
+      label: 'Admin Dashboard',
+      badge: 'Admin',
       icon: ShieldCheck,
-      badgeColor: role === 'ADMIN' ? 'bg-purple-500/20 text-purple-300 border-purple-500/30' : 'bg-amber-500/20 text-amber-300 border-amber-500/30'
-    });
-  }
-
-  if (role === 'INVENTORY_MANAGER' || role === 'ADMIN') {
-    portalItems.push({
-      id: 'inventory-portal',
-      label: 'Inventory Manager',
-      badge: 'Staff',
-      icon: Wrench,
-      badgeColor: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30'
+      badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30'
     });
   }
 
@@ -190,12 +180,12 @@ export const LeftSidebar = ({
             </nav>
           </div>
 
-          {/* PRIVILEGED PORTALS */}
+          {/* PRIVILEGED ADMIN PANEL */}
           {portalItems.length > 0 && (
             <div className="pt-2 border-t border-slate-800/80">
               <div className="px-3 mb-2 flex items-center justify-between">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                  Staff &amp; Management
+                  Admin Panel
                 </span>
               </div>
 

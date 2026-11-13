@@ -66,9 +66,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
 
   const getRoleBadge = (roleName) => {
     const r = String(roleName || '').toUpperCase();
-    if (r === 'ADMIN') return { label: 'Admin', icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200' };
-    if (r === 'SENIOR') return { label: 'Senior', icon: UserCheck, color: 'bg-amber-50 text-amber-700 border-amber-200' };
-    if (r === 'INVENTORY_MANAGER') return { label: 'Inventory', icon: Wrench, color: 'bg-emerald-50 text-emerald-700 border-emerald-200' };
+    if (r === 'ADMIN' || r === 'SENIOR') return { label: 'Admin', icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200' };
     return { label: 'Student', icon: Bot, color: 'bg-blue-50 text-blue-700 border-blue-200' };
   };
 
@@ -219,10 +217,10 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
           {demoAccounts.length > 0 && (
             <div className="pt-3 border-t border-slate-100">
               <p className="text-[11px] font-bold text-slate-500 uppercase tracking-wider mb-2">
-                Quick Account Switch (Club Directory)
+                Quick Panel Switch (Student / Admin)
               </p>
               <div className="grid grid-cols-1 gap-1.5 max-h-44 overflow-y-auto pr-1">
-                {demoAccounts.map((acc) => {
+                {demoAccounts.filter(acc => ['MEMBER', 'ADMIN'].includes(acc.role)).map((acc) => {
                   const badge = getRoleBadge(acc.role);
                   const BadgeIcon = badge.icon;
                   return (
