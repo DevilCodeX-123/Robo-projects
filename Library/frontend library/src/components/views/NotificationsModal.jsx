@@ -81,7 +81,7 @@ export const NotificationsModal = ({ isOpen, onClose, onNavigateToRequests = () 
         onClick={(e) => e.stopPropagation()}
       >
         {/* Navy Header */}
-        <div className="bg-[#0B132B] p-5 sm:p-6 text-white flex items-center justify-between border-b border-slate-800">
+        <div className="bg-[#0F172A] p-5 sm:p-6 text-white flex items-center justify-between border-b border-slate-800">
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white">
               <Bell className="w-5 h-5" />

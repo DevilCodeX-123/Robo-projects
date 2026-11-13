@@ -526,7 +526,7 @@ export const ComponentDetailAndRequestPanel = ({
               <button
                 type="button"
                 onClick={onNavigateToSeniorManagement}
-                className="px-3 py-1.5 rounded-lg bg-[#0B132B] hover:bg-slate-800 text-white font-bold text-[11px] cursor-pointer"
+                className="px-3 py-1.5 rounded-lg bg-[#0F172A] hover:bg-slate-800 text-white font-bold text-[11px] cursor-pointer"
               >
                 Open Senior Management
               </button>
@@ -578,7 +578,7 @@ export const ComponentDetailAndRequestPanel = ({
           <button
             type="submit"
             disabled={submitting || activeItems.length === 0 || seniors.length === 0}
-            className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-xl font-bold shadow-md shadow-blue-500/20 active:scale-[0.99] transition-all flex items-center justify-center space-x-2 text-xs disabled:opacity-50 cursor-pointer"
+            className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-2xs active:scale-[0.99] transition-all flex items-center justify-center space-x-2 text-xs disabled:opacity-50 cursor-pointer"
           >
             {submitting ? (
               <span>Sending Permission Request...</span>
@@ -615,7 +615,7 @@ export const ComponentDetailAndRequestPanel = ({
         {activeSenior ? (
           <>
             <div className="flex items-start space-x-3.5">
-              <div className="w-11 h-11 rounded-2xl bg-[#0B132B] text-white flex items-center justify-center font-bold text-base shadow-md shrink-0">
+              <div className="w-11 h-11 rounded-2xl bg-[#0F172A] text-white flex items-center justify-center font-bold text-base shadow-md shrink-0">
                 {activeSenior.fullName?.charAt(0)?.toUpperCase() || 'S'}
               </div>
               <div>

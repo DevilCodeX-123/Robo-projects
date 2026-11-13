@@ -105,7 +105,7 @@ export const SettingsView = () => {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-in fade-in">
       
       {/* Top Header Banner */}
-      <div className="bg-[#0B132B] rounded-3xl p-6 sm:p-8 text-white border border-slate-800 shadow-xl flex items-center justify-between">
+      <div className="bg-[#0F172A] rounded-3xl p-6 sm:p-8 text-white border border-slate-800 shadow-xl flex items-center justify-between">
         <div>
           <div className="flex items-center space-x-2 text-xs font-mono font-bold tracking-widest text-blue-400 uppercase mb-1">
             <Sliders className="w-4 h-4" />
@@ -263,7 +263,7 @@ export const SettingsView = () => {
       {user && (
         <form onSubmit={handlePasswordChange} className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
           <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-            <Lock className="w-5 h-5 text-[#0B132B]" />
+            <Lock className="w-5 h-5 text-[#0F172A]" />
             <div>
               <h2 className="text-base font-extrabold text-slate-900">Account Security &amp; Password</h2>
               <p className="text-[11px] text-slate-500">Update your login password ({user.email})</p>
@@ -290,7 +290,7 @@ export const SettingsView = () => {
                 value={currentPassword}
                 onChange={(e) => setCurrentPassword(e.target.value)}
                 placeholder="Current password"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
               />
             </div>
             <div>
@@ -301,7 +301,7 @@ export const SettingsView = () => {
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 placeholder="Min 6 characters"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
               />
             </div>
             <div>
@@ -312,7 +312,7 @@ export const SettingsView = () => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 placeholder="Repeat new password"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
               />
             </div>
           </div>
@@ -321,7 +321,7 @@ export const SettingsView = () => {
             <button
               type="submit"
               disabled={savingPassword}
-              className="px-5 py-2.5 bg-[#0B132B] hover:bg-slate-800 disabled:opacity-50 text-white rounded-xl text-xs font-bold flex items-center space-x-2 cursor-pointer"
+              className="px-5 py-2.5 bg-[#0F172A] hover:bg-slate-800 disabled:opacity-50 text-white rounded-xl text-xs font-bold flex items-center space-x-2 cursor-pointer"
             >
               <Lock className="w-3.5 h-3.5" />
               <span>{savingPassword ? 'Updating...' : 'Update Password'}</span>

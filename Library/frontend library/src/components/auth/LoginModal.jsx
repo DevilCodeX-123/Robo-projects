@@ -66,7 +66,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
 
   const getRoleBadge = (roleName) => {
     const r = String(roleName || '').toUpperCase();
-    if (r === 'ADMIN' || r === 'SENIOR') return { label: 'Admin', icon: ShieldCheck, color: 'bg-purple-50 text-purple-700 border-purple-200' };
+    if (r === 'ADMIN' || r === 'SENIOR') return { label: 'Admin', icon: ShieldCheck, color: 'bg-slate-100 text-slate-800 border-slate-200' };
     return { label: 'Student', icon: Bot, color: 'bg-blue-50 text-blue-700 border-blue-200' };
   };
 
@@ -79,7 +79,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
         className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="bg-[#0B132B] px-6 py-5 text-white flex items-center justify-between">
+        <div className="bg-[#0F172A] px-6 py-5 text-white flex items-center justify-between">
           <div>
             <div className="flex items-center space-x-2 text-xs font-mono uppercase tracking-wider text-blue-300">
               <ShieldCheck className="w-3.5 h-3.5" />
@@ -110,7 +110,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                 setErrorMsg('');
               }}
               className={`py-2 rounded-lg transition-colors flex items-center justify-center space-x-1.5 ${
-                mode === 'login' ? 'bg-white text-[#0B132B] shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                mode === 'login' ? 'bg-white text-[#0F172A] shadow-xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <LogIn className="w-3.5 h-3.5" />
@@ -123,7 +123,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                 setErrorMsg('');
               }}
               className={`py-2 rounded-lg transition-colors flex items-center justify-center space-x-1.5 ${
-                mode === 'register' ? 'bg-white text-[#0B132B] shadow-xs' : 'text-slate-600 hover:text-slate-900'
+                mode === 'register' ? 'bg-white text-[#0F172A] shadow-xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
               <UserPlus className="w-3.5 h-3.5" />
@@ -151,7 +151,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="e.g. Rahul Sharma"
-                      className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                      className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                     />
                   </div>
                 </div>
@@ -162,7 +162,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                     value={department}
                     onChange={(e) => setDepartment(e.target.value)}
                     placeholder="e.g. Electronics & Communication"
-                    className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                    className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                   />
                 </div>
               </>
@@ -178,7 +178,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="e.g. aryan@robotics.club"
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
             </div>
@@ -193,7 +193,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter password (demo: password123)"
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
             </div>
@@ -201,7 +201,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
             <button
               type="submit"
               disabled={submitting}
-              className="w-full py-2.5 px-4 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl font-bold flex items-center justify-center space-x-2 shadow-sm transition-colors disabled:opacity-50 cursor-pointer"
+              className="w-full py-2.5 px-4 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl font-bold flex items-center justify-center space-x-2 shadow-sm transition-colors disabled:opacity-50 cursor-pointer"
             >
               {mode === 'login' ? <LogIn className="w-4 h-4" /> : <UserPlus className="w-4 h-4" />}
               <span>

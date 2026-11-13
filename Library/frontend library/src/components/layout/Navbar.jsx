@@ -45,15 +45,15 @@ export const Navbar = ({
   const getRoleBadge = (userRole) => {
     const r = String(userRole || '').toUpperCase();
     if (r === 'ADMIN' || r === 'SENIOR') {
-      return { label: 'Admin', color: 'bg-purple-500/20 text-purple-300 border-purple-500/30' };
+      return { label: 'Admin', color: 'bg-slate-800 text-slate-200 border-slate-700' };
     }
-    return { label: 'Student', color: 'bg-blue-500/20 text-blue-300 border-blue-500/30' };
+    return { label: 'Student', color: 'bg-blue-950/70 text-blue-300 border-blue-800/80' };
   };
 
   const roleInfo = getRoleBadge(role);
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0B132B] border-b border-slate-800/80 shadow-md">
+    <header className="sticky top-0 z-40 bg-slate-900 border-b border-slate-800 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
@@ -72,7 +72,7 @@ export const Navbar = ({
               onClick={() => setCurrentView('home')} 
               className="flex items-center space-x-3 cursor-pointer group"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
+              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-xs group-hover:bg-blue-500 transition-colors">
                 <Bot className="w-6 h-6" />
               </div>
               <div>

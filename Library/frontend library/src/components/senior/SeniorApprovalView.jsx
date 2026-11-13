@@ -186,7 +186,7 @@ export const SeniorApprovalView = ({ onRefreshData = () => {}, onOpenLogin = () 
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-in fade-in">
       
       {/* Top Banner */}
-      <div className="bg-[#0B132B] p-6 sm:p-8 rounded-3xl text-white shadow-xl border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-[#0F172A] p-6 sm:p-8 rounded-3xl text-white shadow-xl border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2 text-xs font-bold text-amber-400 uppercase tracking-wider mb-2 font-mono">
             <ShieldCheck className="w-4 h-4" />
@@ -243,7 +243,7 @@ export const SeniorApprovalView = ({ onRefreshData = () => {}, onOpenLogin = () 
             <button
               type="button"
               onClick={onOpenLogin}
-              className="px-3.5 py-2 rounded-xl bg-[#0B132B] hover:bg-slate-800 text-white text-xs font-bold inline-flex items-center space-x-1.5 shadow-sm transition-colors cursor-pointer"
+              className="px-3.5 py-2 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-white text-xs font-bold inline-flex items-center space-x-1.5 shadow-sm transition-colors cursor-pointer"
             >
               <LogIn className="w-3.5 h-3.5" />
               <span>Sign In as Senior</span>

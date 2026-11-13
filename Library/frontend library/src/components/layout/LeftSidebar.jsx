@@ -75,7 +75,7 @@ export const LeftSidebar = ({
       label: 'Admin Dashboard',
       badge: 'Admin',
       icon: ShieldCheck,
-      badgeColor: 'bg-purple-500/20 text-purple-300 border-purple-500/30'
+      badgeColor: 'bg-slate-800 text-slate-200 border-slate-700'
     });
   }
 
@@ -91,7 +91,7 @@ export const LeftSidebar = ({
 
       {/* Sidebar Container */}
       <aside 
-        className={`fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-[#0B132B] border-r border-slate-800/80 flex flex-col justify-between shrink-0 z-50 transition-transform duration-300 ease-in-out ${
+        className={`fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] w-64 bg-slate-900 border-r border-slate-800 flex flex-col justify-between shrink-0 z-50 transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
@@ -229,7 +229,7 @@ export const LeftSidebar = ({
           )}
 
           {/* Quick Laboratory Status Panel */}
-          <div className="p-3.5 rounded-2xl bg-gradient-to-b from-slate-800/60 to-slate-900/80 border border-slate-700/60 space-y-2">
+          <div className="p-3.5 rounded-2xl bg-slate-800/70 border border-slate-700 space-y-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <span className="relative flex h-2 w-2">
@@ -250,13 +250,13 @@ export const LeftSidebar = ({
         </div>
 
         {/* User Card & Logout at Bottom of Sidebar (Requirement 10) */}
-        <div className="p-3 border-t border-slate-800/80 bg-slate-950/50 space-y-2">
+        <div className="p-3 border-t border-slate-800 bg-slate-950/70 space-y-2">
           <div 
             onClick={onOpenProfile}
-            className="flex items-center space-x-3 p-1.5 rounded-xl hover:bg-slate-900/60 cursor-pointer transition-colors"
+            className="flex items-center space-x-3 p-1.5 rounded-xl hover:bg-slate-800/70 cursor-pointer transition-colors"
           >
-            <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white text-xs font-bold shadow-md shadow-blue-500/20 shrink-0">
-              {user?.fullName?.charAt(0) || 'M'}
+            <div className="w-8 h-8 rounded-xl bg-blue-600 flex items-center justify-center text-white text-xs font-bold shadow-xs shrink-0">
+              {user?.fullName?.charAt(0) || 'U'}
             </div>
             <div className="truncate flex-1">
               <div className="text-xs font-bold text-white truncate leading-tight">

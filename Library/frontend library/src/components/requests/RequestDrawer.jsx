@@ -126,7 +126,7 @@ export const RequestDrawer = ({ isOpen, onClose, onSuccess }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Drawer Header */}
-        <div className="p-5 border-b border-slate-200 bg-[#0B132B] text-white flex items-center justify-between">
+        <div className="p-5 border-b border-slate-200 bg-[#0F172A] text-white flex items-center justify-between">
           <div className="flex items-center space-x-2.5">
             <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
               <Send className="w-4 h-4 text-white" />

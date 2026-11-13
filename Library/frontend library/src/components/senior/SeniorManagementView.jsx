@@ -210,7 +210,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-in fade-in">
       {/* Top Navy Banner */}
-      <div className="bg-[#0B132B] p-6 sm:p-8 rounded-3xl text-white shadow-xl border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+      <div className="bg-[#0F172A] p-6 sm:p-8 rounded-3xl text-white shadow-xl border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div>
           <div className="flex items-center space-x-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-2 font-mono">
             <Users className="w-4 h-4" />
@@ -247,7 +247,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
         <div className="xl:col-span-4 bg-white rounded-3xl border border-slate-200/90 shadow-md p-6 space-y-5">
           <div className="flex items-center justify-between pb-3 border-b border-slate-100">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 rounded-xl bg-[#0B132B] text-white flex items-center justify-center">
+              <div className="w-8 h-8 rounded-xl bg-[#0F172A] text-white flex items-center justify-center">
                 <UserPlus className="w-4 h-4" />
               </div>
               <div>
@@ -295,7 +295,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                 value={formData.fullName}
                 onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                 placeholder="e.g. Rohan Deshmukh"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
               />
             </div>
 
@@ -311,7 +311,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                   value={formData.phoneNumber}
                   onChange={(e) => setFormData({ ...formData, phoneNumber: e.target.value })}
                   placeholder="e.g. +91 98765 43210"
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl font-mono text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
             </div>
@@ -327,7 +327,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="e.g. rohan@robotics.club"
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
             </div>
@@ -344,7 +344,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                   value={formData.department}
                   onChange={(e) => setFormData({ ...formData, department: e.target.value })}
                   placeholder="e.g. Electronics & Communication"
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
             </div>
@@ -361,7 +361,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                   value={formData.position}
                   onChange={(e) => setFormData({ ...formData, position: e.target.value })}
                   placeholder="e.g. Hardware Tech Lead"
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
             </div>
@@ -375,14 +375,14 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                 value={formData.password}
                 onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                 placeholder="Min 6 chars (defaults to senior123 with email)"
-                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
               />
             </div>
 
             <button
               type="submit"
               disabled={submitting || !canManageSeniors}
-              className="w-full py-3 px-4 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl font-bold flex items-center justify-center space-x-2 shadow-md transition-all disabled:opacity-50 cursor-pointer"
+              className="w-full py-3 px-4 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl font-bold flex items-center justify-center space-x-2 shadow-md transition-all disabled:opacity-50 cursor-pointer"
             >
               <Save className="w-4 h-4" />
               <span>{!canManageSeniors ? 'Senior/Admin Required' : submitting ? 'Saving...' : editingId ? 'Update Senior' : 'Save Senior'}</span>
@@ -401,7 +401,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search seniors by name, phone, department, or role..."
-                className="w-full pl-10 pr-8 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                className="w-full pl-10 pr-8 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
               />
               {searchQuery && (
                 <button
@@ -478,7 +478,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
                     <div className="space-y-3">
                       <div className="flex items-start justify-between gap-2">
                         <div className="flex items-center space-x-3">
-                          <div className="w-11 h-11 rounded-2xl bg-[#0B132B] text-white font-black text-base flex items-center justify-center shrink-0">
+                          <div className="w-11 h-11 rounded-2xl bg-[#0F172A] text-white font-black text-base flex items-center justify-center shrink-0">
                             {senior.fullName?.charAt(0)?.toUpperCase() || 'S'}
                           </div>
                           <div>
@@ -633,7 +633,7 @@ export const SeniorManagementView = ({ onSeniorsUpdated = () => {} }) => {
             className="bg-white rounded-3xl max-w-md w-full shadow-2xl border border-slate-200 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-5 bg-[#0B132B] text-white flex items-center justify-between">
+            <div className="p-5 bg-[#0F172A] text-white flex items-center justify-between">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-black text-base">
                   {detailSenior.fullName?.charAt(0)?.toUpperCase() || 'S'}

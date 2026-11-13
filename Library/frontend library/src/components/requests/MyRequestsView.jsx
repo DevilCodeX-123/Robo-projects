@@ -470,7 +470,7 @@ export const MyRequestsView = ({ onBackHome = () => {}, onRefreshData = () => {}
             className="bg-white rounded-3xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="p-5 bg-[#0B132B] text-white flex items-center justify-between">
+            <div className="p-5 bg-[#0F172A] text-white flex items-center justify-between">
               <div>
                 <h3 className="text-base font-bold text-white flex items-center space-x-2">
                   <RotateCcw className="w-4 h-4 text-emerald-400" />

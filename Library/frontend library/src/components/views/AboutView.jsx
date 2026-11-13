@@ -19,7 +19,7 @@ export const AboutView = ({ onBackHome = () => {} }) => {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-in fade-in">
       
       {/* Header Banner */}
-      <div className="bg-[#0B132B] rounded-3xl p-8 sm:p-10 text-white border border-slate-800 shadow-xl relative overflow-hidden">
+      <div className="bg-[#0F172A] rounded-3xl p-8 sm:p-10 text-white border border-slate-800 shadow-xl relative overflow-hidden">
         <div className="relative z-10 max-w-2xl space-y-3">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-xs font-mono font-bold">
             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />

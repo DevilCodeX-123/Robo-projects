@@ -48,49 +48,49 @@ export const StorageAlmirah = ({
       title: 'BASIC ELECTRONICS',
       category: 'Basic Electronics',
       icon: Zap,
-      accent: 'text-amber-300'
+      accent: 'text-amber-400'
     },
     {
       index: 2,
       title: 'SEMICONDUCTORS',
       category: 'Semiconductors',
       icon: Cpu,
-      accent: 'text-purple-300'
+      accent: 'text-sky-400'
     },
     {
       index: 3,
       title: 'MICROCONTROLLERS',
       category: 'Microcontrollers',
       icon: Box,
-      accent: 'text-cyan-300'
+      accent: 'text-blue-400'
     },
     {
       index: 4,
       title: 'SENSORS',
       category: 'Sensors',
       icon: Radio,
-      accent: 'text-sky-300'
+      accent: 'text-emerald-400'
     },
     {
       index: 5,
       title: 'MOTORS',
       category: 'Motors',
       icon: Layers,
-      accent: 'text-orange-300'
+      accent: 'text-orange-400'
     },
     {
       index: 6,
       title: 'CABLES',
       category: 'Cables',
       icon: Cable,
-      accent: 'text-indigo-300'
+      accent: 'text-indigo-400'
     },
     {
       index: 7,
       title: 'TOOLS & EQUIPMENT',
       category: 'Equipment',
       icon: Wrench,
-      accent: 'text-emerald-300'
+      accent: 'text-slate-300'
     }
   ];
 
@@ -151,7 +151,7 @@ export const StorageAlmirah = ({
          ========================================================================= */}
       <div className="flex flex-wrap items-center justify-between gap-3 pb-2 border-b border-slate-100">
         <div className="flex items-center space-x-2.5">
-          <div className="w-9 h-9 rounded-xl bg-[#0B132B] text-white flex items-center justify-center shadow-xs">
+          <div className="w-9 h-9 rounded-xl bg-slate-900 text-white flex items-center justify-center shadow-2xs">
             <Box className="w-5 h-5" />
           </div>
           <div>
@@ -159,8 +159,8 @@ export const StorageAlmirah = ({
               <h2 className="text-base sm:text-lg font-extrabold text-slate-900 tracking-tight">
                 Components Inventory
               </h2>
-              <span className="hidden sm:inline-flex items-center space-x-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="hidden sm:inline-flex items-center space-x-1 px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200 text-[10px] font-bold">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                 <span>Smart Digital Almirah</span>
               </span>
             </div>
@@ -206,7 +206,7 @@ export const StorageAlmirah = ({
             className={`px-2.5 py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 border transition-all cursor-pointer ${
               doorsOpen
                 ? 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
-                : 'bg-[#0B132B] text-white border-[#0B132B]'
+                : 'bg-slate-900 text-white border-slate-900'
             }`}
           >
             {doorsOpen ? <DoorOpen className="w-3.5 h-3.5" /> : <Lock className="w-3.5 h-3.5" />}
@@ -228,33 +228,33 @@ export const StorageAlmirah = ({
           PHYSICAL CUPBOARD SHELL WITH OPEN WOODEN DOORS & DARK STEEL CHASSIS
          ========================================================================= */}
       <div className="relative flex items-stretch justify-center pt-1 pb-4">
-        {/* LEFT OPEN WOODEN CABINET DOOR (visible on desktop when doors are open) */}
+        {/* LEFT OPEN INDUSTRIAL CABINET DOOR (visible on desktop when doors are open) */}
         <div
-          className={`hidden md:flex flex-col justify-between w-9 lg:w-12 shrink-0 rounded-l-xl border-2 border-[#7c4a21] shadow-xl transition-all duration-500 origin-right relative overflow-hidden ${
+          className={`hidden md:flex flex-col justify-between w-9 lg:w-12 shrink-0 rounded-l-xl border-2 border-slate-700 shadow-xl transition-all duration-500 origin-right relative overflow-hidden ${
             doorsOpen ? 'opacity-100 translate-x-0' : 'w-0 opacity-0 border-0 overflow-hidden'
           }`}
           style={{
-            background: 'linear-gradient(135deg, #c98c50 0%, #b37338 45%, #8f5623 100%)'
+            background: 'linear-gradient(135deg, #334155 0%, #1e293b 50%, #0f172a 100%)'
           }}
         >
-          {/* Wood panel bevel */}
-          <div className="m-1.5 flex-1 rounded-md border border-[#e0a870]/40 bg-black/5 shadow-inner flex items-center justify-end pr-1">
-            {/* Silver Metal Pull Handle */}
-            <div className="w-1.5 h-16 rounded-full bg-gradient-to-b from-slate-200 via-slate-400 to-slate-600 border border-slate-700 shadow-md" />
+          {/* Bevel */}
+          <div className="m-1.5 flex-1 rounded-md border border-slate-600/50 bg-black/10 shadow-inner flex items-center justify-end pr-1">
+            {/* Matte Aluminum Pull Handle */}
+            <div className="w-1.5 h-16 rounded-full bg-slate-300 border border-slate-500 shadow-md" />
           </div>
           {/* Door Hinges */}
-          <div className="absolute top-8 right-0 w-2 h-5 bg-slate-700 rounded-l-sm border-y border-slate-500" />
-          <div className="absolute bottom-8 right-0 w-2 h-5 bg-slate-700 rounded-l-sm border-y border-slate-500" />
+          <div className="absolute top-8 right-0 w-2 h-5 bg-slate-600 rounded-l-sm border-y border-slate-500" />
+          <div className="absolute bottom-8 right-0 w-2 h-5 bg-slate-600 rounded-l-sm border-y border-slate-500" />
         </div>
 
         {/* MAIN STEEL ALMIRAH CABINET BODY */}
         <div className="flex-1 min-w-0 relative">
-          <div className="relative rounded-xl md:rounded-none bg-gradient-to-b from-[#1f2633] via-[#131822] to-[#0d1118] border-[5px] border-[#2b3342] shadow-2xl overflow-hidden">
+          <div className="relative rounded-xl md:rounded-none bg-slate-950 border-[5px] border-slate-800 shadow-2xl overflow-hidden">
             {/* Top Interior LED Cabinet Light Strip */}
             <div
               className={`h-2 w-full transition-all duration-500 ${
                 ledLightOn
-                  ? 'bg-gradient-to-r from-amber-200/70 via-white to-amber-200/70 shadow-[0_6px_28px_rgba(253,230,138,0.65)]'
+                  ? 'bg-gradient-to-r from-slate-200/90 via-white to-slate-200/90 shadow-[0_2px_12px_rgba(255,255,255,0.35)]'
                   : 'bg-slate-800'
               }`}
             />
@@ -265,13 +265,13 @@ export const StorageAlmirah = ({
                 className="min-h-[460px] flex flex-col items-center justify-center p-8 text-center relative"
                 style={{
                   background:
-                    'repeating-linear-gradient(90deg, #b5763b 0px, #a86a31 48%, #543214 50%, #a86a31 52%, #945924 100%)'
+                    'repeating-linear-gradient(90deg, #1e293b 0px, #334155 48%, #0f172a 50%, #334155 52%, #1e293b 100%)'
                 }}
               >
-                <div className="absolute inset-y-4 left-4 right-[51%] border-2 border-[#e0a870]/30 rounded-lg pointer-events-none" />
-                <div className="absolute inset-y-4 left-[51%] right-4 border-2 border-[#e0a870]/30 rounded-lg pointer-events-none" />
+                <div className="absolute inset-y-4 left-4 right-[51%] border-2 border-slate-600/30 rounded-lg pointer-events-none" />
+                <div className="absolute inset-y-4 left-[51%] right-4 border-2 border-slate-600/30 rounded-lg pointer-events-none" />
 
-                <div className="relative z-10 bg-[#0B132B]/95 backdrop-blur-md text-white p-6 rounded-2xl border border-slate-700 shadow-2xl max-w-sm space-y-3">
+                <div className="relative z-10 bg-slate-900/95 text-white p-6 rounded-2xl border border-slate-700 shadow-2xl max-w-sm space-y-3">
                   <div className="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-400/40 flex items-center justify-center mx-auto text-blue-400">
                     <Lock className="w-6 h-6" />
                   </div>
@@ -295,7 +295,7 @@ export const StorageAlmirah = ({
               /* OPEN INTERIOR SHELVES & TRANSPARENT PLASTIC STORAGE BINS */
               <div
                 className={`p-3 sm:p-4 lg:p-5 space-y-5 relative transition-all duration-500 ${
-                  ledLightOn ? 'bg-gradient-to-b from-slate-800/40 via-slate-900/70 to-slate-950' : 'bg-slate-950/95'
+                  ledLightOn ? 'bg-slate-900/90' : 'bg-slate-950'
                 }`}
               >
                 {/* Left & Right Internal Shelf Peg Rails */}
@@ -362,15 +362,15 @@ export const StorageAlmirah = ({
                                 title={`${comp.name} — ${qty} ${comp.unit || 'pcs'} available`}
                                 className={`group relative rounded-xl cursor-pointer transition-all duration-200 flex flex-col justify-between overflow-hidden select-none ${
                                   inspected
-                                    ? 'ring-2 ring-blue-400 border-2 border-blue-400 bg-gradient-to-b from-blue-400/30 via-white/15 to-blue-950/60 shadow-[0_0_24px_rgba(59,130,246,0.45)] -translate-y-1'
+                                    ? 'ring-2 ring-blue-500 border border-blue-500 bg-slate-900 shadow-md -translate-y-0.5'
                                     : selected
-                                      ? 'ring-2 ring-emerald-400 border-2 border-emerald-400/90 bg-gradient-to-b from-emerald-400/20 via-white/15 to-slate-900/70 shadow-lg -translate-y-0.5'
-                                      : 'border border-white/30 bg-gradient-to-b from-white/20 via-white/10 to-slate-900/50 hover:border-blue-300/80 hover:from-white/30 hover:-translate-y-0.5 shadow-[inset_0_1px_5px_rgba(255,255,255,0.35),0_6px_12px_rgba(0,0,0,0.4)]'
+                                      ? 'ring-2 ring-emerald-500 border border-emerald-500 bg-slate-900 shadow-md -translate-y-0.5'
+                                      : 'border border-slate-700/80 bg-slate-900/90 hover:border-slate-500 hover:bg-slate-850 shadow-2xs'
                                 }`}
                               >
                                 {/* Molded Plastic Box Top Rim Lip */}
-                                <div className="h-2.5 bg-gradient-to-b from-white/40 to-white/10 border-b border-white/25 flex items-center justify-between px-2">
-                                  <div className="w-8 h-1 rounded-full bg-white/40 mx-auto" />
+                                <div className="h-2 bg-slate-800/80 border-b border-slate-700/60 flex items-center justify-between px-2">
+                                  <div className="w-8 h-0.5 rounded-full bg-slate-600 mx-auto" />
                                 </div>
 
                                 {/* Top Badges: Stock Qty Pill + Multi-Select Toggle */}
@@ -428,15 +428,12 @@ export const StorageAlmirah = ({
 
                                 {/* Front Printed Bin Sticker Label (matches reference image) */}
                                 <div className="px-2 pb-2 pt-0.5">
-                                  <div className="bg-white/95 rounded-md px-2 py-1 border border-slate-300/90 shadow-sm text-center">
+                                  <div className="bg-white rounded-md px-2 py-1 border border-slate-300 shadow-2xs text-center">
                                     <div className="text-[11px] font-extrabold text-slate-900 tracking-tight truncate group-hover:text-blue-700 transition-colors">
                                       {comp.label || comp.name}
                                     </div>
                                   </div>
                                 </div>
-
-                                {/* Diagonal Acrylic Reflection Glare */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
                               </div>
                             );
                           })}

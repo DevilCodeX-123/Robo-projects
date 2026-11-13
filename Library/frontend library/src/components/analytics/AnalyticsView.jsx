@@ -36,7 +36,7 @@ export const AnalyticsView = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 animate-in fade-in">
       
       {/* Header Banner */}
-      <div className="bg-[#0B132B] p-6 sm:p-8 rounded-3xl text-white shadow-xl border border-slate-800">
+      <div className="bg-[#0F172A] p-6 sm:p-8 rounded-3xl text-white shadow-xl border border-slate-800">
         <div className="flex items-center space-x-2 text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
           <TrendingUp className="w-4 h-4" />
           <span>Real-time Laboratory Intelligence</span>

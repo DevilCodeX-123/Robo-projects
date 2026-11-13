@@ -73,7 +73,7 @@ export const UserProfileModal = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Navy Header Card */}
-        <div className="bg-[#0B132B] p-6 text-white relative shrink-0">
+        <div className="bg-[#0F172A] p-6 text-white relative shrink-0">
           <button
             type="button"
             onClick={onClose}

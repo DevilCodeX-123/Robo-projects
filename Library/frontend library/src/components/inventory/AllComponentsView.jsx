@@ -56,7 +56,7 @@ export const AllComponentsView = ({
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6 animate-in fade-in">
       
       {/* Top Header Banner */}
-      <div className="bg-[#0B132B] rounded-3xl p-6 sm:p-8 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div className="bg-[#0F172A] rounded-3xl p-6 sm:p-8 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
           <button
             onClick={onBackToAlmirah}

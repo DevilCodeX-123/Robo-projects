@@ -479,7 +479,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
       )}
 
       {/* TOP HEADER: SHARED UNIFIED MANAGEMENT DASHBOARD */}
-      <div className="bg-[#0B132B] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+      <div className="bg-[#0F172A] rounded-3xl p-6 sm:p-8 text-white shadow-xl border border-slate-800 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
         <div>
           <div className="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-blue-400 mb-2">
             <ShieldCheck className="w-4 h-4" />
@@ -495,7 +495,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
           <div className="flex flex-wrap items-center gap-2 mt-4">
             <span className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-extrabold border ${
               isAdmin
-                ? 'bg-purple-500/20 text-purple-300 border-purple-500/40'
+                ? 'bg-slate-800 text-slate-200 border-slate-700'
                 : 'bg-amber-500/20 text-amber-300 border-amber-500/40'
             }`}>
               {isAdmin ? <ShieldAlert className="w-3.5 h-3.5" /> : <UserCheck className="w-3.5 h-3.5" />}
@@ -542,7 +542,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
               }}
               className={`px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex items-center space-x-2 cursor-pointer ${
                 isActive
-                  ? 'bg-[#0B132B] text-white shadow-sm'
+                  ? 'bg-[#0F172A] text-white shadow-sm'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
               }`}
             >
@@ -668,7 +668,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                       });
                       setIsCompModalOpen(true);
                     }}
-                    className="px-3.5 py-2 rounded-xl bg-[#0B132B] hover:bg-slate-800 text-white text-xs font-bold flex items-center space-x-1.5 shadow-xs cursor-pointer"
+                    className="px-3.5 py-2 rounded-xl bg-[#0F172A] hover:bg-slate-800 text-white text-xs font-bold flex items-center space-x-1.5 shadow-xs cursor-pointer"
                   >
                     <Plus className="w-3.5 h-3.5" />
                     <span>Add Component</span>
@@ -778,7 +778,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   });
                   setIsCompModalOpen(true);
                 }}
-                className="px-4 py-2.5 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl text-xs font-bold inline-flex items-center space-x-2 shadow-sm cursor-pointer shrink-0"
+                className="px-4 py-2.5 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl text-xs font-bold inline-flex items-center space-x-2 shadow-sm cursor-pointer shrink-0"
               >
                 <Plus className="w-4 h-4" />
                 <span>Add New Component</span>
@@ -798,7 +798,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search components by name, code, or category..."
-              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
             />
           </div>
 
@@ -915,7 +915,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search students by name, email, department, or membership ID..."
-              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
             />
           </div>
 
@@ -1011,7 +1011,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   onClick={() => setRequestFilter(st)}
                   className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-colors cursor-pointer ${
                     requestFilter === st
-                      ? 'bg-[#0B132B] text-white'
+                      ? 'bg-[#0F172A] text-white'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
@@ -1236,7 +1236,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   });
                   setIsSeniorModalOpen(true);
                 }}
-                className="px-4 py-2.5 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl text-xs font-bold inline-flex items-center space-x-2 shadow-sm cursor-pointer shrink-0"
+                className="px-4 py-2.5 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl text-xs font-bold inline-flex items-center space-x-2 shadow-sm cursor-pointer shrink-0"
               >
                 <Plus className="w-4 h-4" />
                 <span>Add Senior</span>
@@ -1249,7 +1249,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
               <div key={sen._id || sen.id} className="p-4 rounded-2xl border border-slate-200 bg-slate-50/60 space-y-3">
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 rounded-xl bg-[#0B132B] text-white font-black text-sm flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#0F172A] text-white font-black text-sm flex items-center justify-center shrink-0">
                       {sen.fullName?.charAt(0)?.toUpperCase() || 'S'}
                     </div>
                     <div>
@@ -1322,7 +1322,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
           {/* Profile Details Card */}
           <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div className="flex items-center space-x-3 pb-3 border-b border-slate-100">
-              <div className="w-12 h-12 rounded-2xl bg-[#0B132B] text-white flex items-center justify-center text-lg font-black">
+              <div className="w-12 h-12 rounded-2xl bg-[#0F172A] text-white flex items-center justify-center text-lg font-black">
                 {user?.fullName?.charAt(0)?.toUpperCase() || 'M'}
               </div>
               <div>
@@ -1342,7 +1342,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   required
                   value={profileForm.fullName}
                   onChange={(e) => setProfileForm({ ...profileForm, fullName: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
@@ -1352,7 +1352,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   type="text"
                   value={profileForm.department}
                   onChange={(e) => setProfileForm({ ...profileForm, department: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
@@ -1362,7 +1362,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   type="text"
                   value={profileForm.teamName}
                   onChange={(e) => setProfileForm({ ...profileForm, teamName: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
@@ -1372,13 +1372,13 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   type="text"
                   value={profileForm.contactNumber}
                   onChange={(e) => setProfileForm({ ...profileForm, contactNumber: e.target.value })}
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full py-2.5 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl font-bold flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs"
+                className="w-full py-2.5 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl font-bold flex items-center justify-center space-x-1.5 cursor-pointer shadow-xs"
               >
                 <Save className="w-4 h-4" />
                 <span>Save Profile Changes</span>
@@ -1389,7 +1389,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
           {/* Change Password Card */}
           <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xs p-6 space-y-5">
             <div className="flex items-center space-x-2 pb-3 border-b border-slate-100">
-              <Lock className="w-5 h-5 text-[#0B132B]" />
+              <Lock className="w-5 h-5 text-[#0F172A]" />
               <div>
                 <h3 className="text-base font-extrabold text-slate-900">Account Password &amp; Security</h3>
                 <p className="text-xs text-slate-500">Update your login password</p>
@@ -1405,7 +1405,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   value={currentPassword}
                   onChange={(e) => setCurrentPassword(e.target.value)}
                   placeholder="Enter current password"
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
@@ -1417,7 +1417,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   placeholder="Minimum 6 characters"
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
@@ -1429,7 +1429,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   placeholder="Confirm new password"
-                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
 
@@ -1469,7 +1469,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
                   value={reviewComments}
                   onChange={(e) => setReviewComments(e.target.value)}
                   placeholder={reviewAction === 'APPROVED' ? 'e.g. Approved for Line Follower project.' : 'Please provide reason for rejection.'}
-                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0B132B]"
+                  className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
               <div className="flex justify-end space-x-2">
@@ -1544,7 +1544,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
               </div>
               <div className="flex justify-end space-x-2 pt-2">
                 <button type="button" onClick={() => setIsCompModalOpen(false)} className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold">Cancel</button>
-                <button type="submit" className="px-5 py-2 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl font-bold">Save Component</button>
+                <button type="submit" className="px-5 py-2 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl font-bold">Save Component</button>
               </div>
             </form>
           </div>
@@ -1698,7 +1698,7 @@ export const ManagementDashboard = ({ onRefreshData = () => {}, defaultTab = 'ov
               </div>
               <div className="flex justify-end space-x-2 pt-2">
                 <button type="button" onClick={() => setIsSeniorModalOpen(false)} className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold">Cancel</button>
-                <button type="submit" className="px-5 py-2 bg-[#0B132B] hover:bg-slate-800 text-white rounded-xl font-bold">Save Senior</button>
+                <button type="submit" className="px-5 py-2 bg-[#0F172A] hover:bg-slate-800 text-white rounded-xl font-bold">Save Senior</button>
               </div>
             </form>
           </div>

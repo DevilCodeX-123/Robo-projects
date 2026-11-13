@@ -9,14 +9,11 @@
   }
 }
 
-/* Custom styles for circuit background aesthetic */
+/* Clean technical dot grid background aesthetic */
 .circuit-bg {
-  background-color: #0B132B;
-  background-image: 
-    radial-gradient(#1e3a8a 1px, transparent 1px),
-    radial-gradient(#2563eb 0.5px, #0B132B 0.5px);
-  background-size: 40px 40px;
-  background-position: 0 0, 20px 20px;
+  background-color: #0F172A;
+  background-image: radial-gradient(#334155 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 /* Custom scrollbars */
