@@ -298,13 +298,11 @@ export const reviewRequest = async (req, res) => {
       request.status = 'REJECTED';
       request.items = request.items.map(item => ({ ...item, itemStatus: 'REJECTED' }));
 
-      const reviewerName = req.user.fullName || 'Senior Reviewer';
-      const reviewerRole = String(req.user.role || '').toUpperCase() === 'ADMIN' ? 'Administrator' : 'Senior Coordinator';
-
+      // Anonymous rejection notification: do NOT reveal who rejected the request
       await dataService.createNotification({
         user: request.user,
-        title: `Request Rejected by ${reviewerName}`,
-        message: `Your request ${request.requestCode} was reviewed and rejected by ${reviewerName} (${reviewerRole}). Note: ${comments || 'No remarks provided.'}`,
+        title: 'Request Rejected',
+        message: `Your request ${request.requestCode} was reviewed and rejected.${comments ? ` Note: "${comments}".` : ' No remarks provided.'}`,
         link: `/my-requests?id=${request._id || request.id}`,
         type: 'DANGER'
       });
@@ -312,24 +310,27 @@ export const reviewRequest = async (req, res) => {
     } else if (action === 'REQUESTED_INFO') {
       request.status = 'AWAITING_INFO';
 
-      const reviewerName = req.user.fullName || 'Senior Reviewer';
-      const reviewerRole = String(req.user.role || '').toUpperCase() === 'ADMIN' ? 'Administrator' : 'Senior Coordinator';
-
       await dataService.createNotification({
         user: request.user,
-        title: `Info Requested by ${reviewerName}`,
-        message: `${reviewerName} (${reviewerRole}) requested more details on ${request.requestCode}: "${comments || 'Please provide additional project details.'}"`,
+        title: 'Additional Information Requested',
+        message: `More details requested on ${request.requestCode}: "${comments || 'Please provide additional project details.'}"`,
         link: `/my-requests?id=${request._id || request.id}`,
         type: 'WARNING'
       });
     }
 
-    const updated = await dataService.updateRequest(id, {
+    const updatePayload = {
       status: request.status,
       items: request.items,
-      approvalHistory: history,
-      seniorApproverName: req.user.fullName || request.seniorApproverName
-    });
+      approvalHistory: history
+    };
+
+    // Only update seniorApproverName on approval; keep rejections anonymous
+    if (action === 'APPROVED' || action === 'PARTIALLY_APPROVED') {
+      updatePayload.seniorApproverName = req.user.fullName || request.seniorApproverName;
+    }
+
+    const updated = await dataService.updateRequest(id, updatePayload);
 
     res.json({ success: true, request: updated });
   } catch (error) {

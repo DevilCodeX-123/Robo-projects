@@ -411,23 +411,31 @@ export const MyRequestsView = ({ onBackHome = () => {}, onRefreshData = () => {}
                 {/* Details Footer: Senior Details, Pickup Date & Return Status */}
                 <div className="mt-4 pt-3 border-t border-slate-100 flex flex-wrap items-center justify-between text-xs text-slate-500 gap-3">
                   <div className="flex items-center space-x-4">
-                    <span className="flex items-center space-x-1.5">
-                      <UserCheck className="w-3.5 h-3.5 text-slate-400" />
-                      <span>{req.status === 'REJECTED' ? 'Reviewed by: ' : 'Approved by: '} <strong className="text-slate-800">{
-                        (req.approvalHistory && req.approvalHistory.length > 0 && req.approvalHistory[req.approvalHistory.length - 1].approverName)
-                        || req.seniorApproverName
-                        || 'Senior Lead'
-                      }</strong></span>
-                    </span>
+                    {req.status !== 'REJECTED' && (
+                      <span className="flex items-center space-x-1.5">
+                        <UserCheck className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Approved by: <strong className="text-slate-800">{
+                          (req.approvalHistory && req.approvalHistory.length > 0 && req.approvalHistory[req.approvalHistory.length - 1].approverName)
+                          || req.seniorApproverName
+                          || 'Senior Lead'
+                        }</strong></span>
+                      </span>
+                    )}
+                    {req.status === 'REJECTED' && (
+                      <span className="flex items-center space-x-1.5">
+                        <UserCheck className="w-3.5 h-3.5 text-slate-400" />
+                        <span>Status: <strong className="text-red-700">Rejected by Review Committee</strong></span>
+                      </span>
+                    )}
                     <span className="flex items-center space-x-1.5">
                       <Calendar className="w-3.5 h-3.5 text-slate-400" />
-                      <span>Return Status: <strong className="text-slate-800">{req.status === 'RETURNED' ? 'Returned to Lab' : `Expected by ${new Date(req.expectedReturnDate).toLocaleDateString()}`}</strong></span>
+                      <span>Return Status: <strong className="text-slate-800">{req.status === 'RETURNED' ? 'Returned to Lab' : req.status === 'REJECTED' ? 'Not Applicable' : `Expected by ${new Date(req.expectedReturnDate).toLocaleDateString()}`}</strong></span>
                     </span>
                   </div>
 
                   {req.approvalHistory && req.approvalHistory.length > 0 && (
                     <div className="text-xs bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200 text-slate-700">
-                      <span className="font-bold">Senior Remark: </span>
+                      <span className="font-bold">{req.status === 'REJECTED' ? 'Rejection Reason: ' : 'Senior Remark: '}</span>
                       <span className="italic">{req.approvalHistory[req.approvalHistory.length - 1].comments}</span>
                     </div>
                   )}
