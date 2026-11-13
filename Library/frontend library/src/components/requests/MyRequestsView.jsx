@@ -17,7 +17,10 @@ import { api } from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 
 export const MyRequestsView = ({ onBackHome = () => {}, onRefreshData = () => {} }) => {
-  const { user } = useAuth();
+  const { user, role } = useAuth();
+  const normalizedRole = String(role || user?.role || 'MEMBER').toUpperCase();
+  const isAdmin = normalizedRole === 'ADMIN' || normalizedRole === 'SENIOR';
+
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [activeFilter, setActiveFilter] = useState('ALL'); // 'ALL' | 'PENDING' | 'APPROVED' | 'REJECTED'
@@ -35,7 +38,18 @@ export const MyRequestsView = ({ onBackHome = () => {}, onRefreshData = () => {}
       setLoading(true);
       const res = await api.getRequests();
       if (res.success) {
-        setRequests(res.requests || []);
+        let fetchedReqs = res.requests || [];
+        // Strict role security: If student, strictly isolate to only their own requests
+        if (!isAdmin) {
+          const currentUserId = String(user?.id || user?._id || '');
+          const currentUserEmail = String(user?.email || '').toLowerCase();
+          fetchedReqs = fetchedReqs.filter(r => {
+            const reqUserId = String(r.user?._id || r.user?.id || r.user || '');
+            const reqEmail = String(r.userEmail || '').toLowerCase();
+            return (currentUserId && reqUserId === currentUserId) || (currentUserEmail && reqEmail === currentUserEmail);
+          });
+        }
+        setRequests(fetchedReqs);
       }
     } catch (err) {
       console.error('Error fetching requests:', err);
@@ -181,10 +195,12 @@ export const MyRequestsView = ({ onBackHome = () => {}, onRefreshData = () => {}
             <span>Back to Storage Almirah</span>
           </button>
           <h1 className="text-2xl font-black text-slate-900 tracking-tight">
-            My Component Requests
+            {isAdmin ? 'All Component Requests (Admin View)' : 'My Component Requests'}
           </h1>
           <p className="text-xs text-slate-500 mt-0.5">
-            Track real-time request progress, senior sign-offs, component assignment, and return components to automatically restock inventory.
+            {isAdmin 
+              ? 'Administrator view: Monitoring all student requests, approvals, component assignments, and return statuses.' 
+              : 'Track your personal component requests, senior approvals, pickup details, and returns.'}
           </p>
         </div>
 

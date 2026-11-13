@@ -150,10 +150,13 @@ export const getRequests = async (req, res) => {
     let filter = {};
     if (status) filter.status = status;
 
-    // If student/member, only return their own requests
+    // Strict role-based isolation:
+    // If student/member: only return their own requests
+    // If Admin/Senior: return all requests across the club
     const normalizedRole = String(req.user.role || '').toUpperCase();
     if (normalizedRole === 'MEMBER' || normalizedRole === 'STUDENT') {
       filter.user = req.user._id || req.user.id;
+      filter.userEmail = req.user.email;
     }
 
     const requests = await dataService.getRequests(filter);
@@ -172,8 +175,12 @@ export const getRequestById = async (req, res) => {
 
     // Role security: students/members can only view their own requests
     const normalizedRole = String(req.user.role || '').toUpperCase();
-    if ((normalizedRole === 'MEMBER' || normalizedRole === 'STUDENT') && String(request.user) !== String(req.user._id || req.user.id)) {
-      return res.status(403).json({ success: false, message: 'Access denied to this request' });
+    if (normalizedRole === 'MEMBER' || normalizedRole === 'STUDENT') {
+      const isOwnerId = String(request.user?._id || request.user?.id || request.user) === String(req.user._id || req.user.id);
+      const isOwnerEmail = request.userEmail && String(request.userEmail).toLowerCase() === String(req.user.email).toLowerCase();
+      if (!isOwnerId && !isOwnerEmail) {
+        return res.status(403).json({ success: false, message: 'Access denied to this request' });
+      }
     }
 
     res.json({ success: true, request });

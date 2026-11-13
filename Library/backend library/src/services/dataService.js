@@ -310,14 +310,25 @@ export const dataService = {
   async getRequests(filter = {}) {
     if (isMongoConnected) {
       const query = {};
-      if (filter.user) query.user = filter.user;
+      if (filter.user) {
+        query.$or = [
+          { user: filter.user },
+          ...(filter.userEmail ? [{ userEmail: filter.userEmail }] : [])
+        ];
+      }
       if (filter.status) query.status = filter.status;
       return await RequestModel.find(query).sort({ createdAt: -1 });
     }
 
     let items = [...localStore.requests];
     if (filter.user) {
-      items = items.filter(r => String(r.user) === String(filter.user));
+      const targetUserId = String(filter.user);
+      const targetEmail = filter.userEmail ? String(filter.userEmail).toLowerCase() : null;
+      items = items.filter(r => {
+        const reqUserId = String(r.user?._id || r.user?.id || r.user || '');
+        const reqEmail = r.userEmail ? String(r.userEmail).toLowerCase() : null;
+        return (targetUserId && reqUserId === targetUserId) || (targetEmail && reqEmail === targetEmail);
+      });
     }
     if (filter.status) {
       items = items.filter(r => r.status === filter.status);
