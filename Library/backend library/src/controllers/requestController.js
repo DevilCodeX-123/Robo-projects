@@ -90,8 +90,8 @@ export const createRequest = async (req, res) => {
     }
 
     const assignedSeniorId = registeredSenior?._id || registeredSenior?.id || seniorUser?._id || seniorUser?.id;
-    const assignedSeniorName = registeredSenior?.fullName || seniorUser?.fullName || req.body.seniorApproverName || 'Senior Approver';
-    const assignedSeniorPhone = seniorContact || registeredSenior?.phoneNumber || seniorUser?.contactNumber || '';
+    const assignedSeniorName = req.body.seniorApproverName || registeredSenior?.fullName || seniorUser?.fullName || 'Senior Approver';
+    const assignedSeniorPhone = seniorContact || req.body.seniorPhone || registeredSenior?.phoneNumber || seniorUser?.contactNumber || '';
     const assignedSeniorDept = registeredSenior?.department || seniorUser?.department || '';
     const assignedSeniorPos = registeredSenior?.position || 'Senior Approver';
 

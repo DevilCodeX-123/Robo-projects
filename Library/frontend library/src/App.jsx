@@ -469,7 +469,6 @@ export function App() {
                       fetchDashboardData();
                     }}
                     onNavigateToRequests={() => setCurrentView('my-requests')}
-                    onNavigateToSeniorManagement={() => setCurrentView('senior-management')}
                   />
                 </div>
 

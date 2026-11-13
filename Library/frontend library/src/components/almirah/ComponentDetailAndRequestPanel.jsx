@@ -47,6 +47,7 @@ export const ComponentDetailAndRequestPanel = ({
   const [selectedProject, setSelectedProject] = useState(DEMO_PROJECTS[0] || 'Autonomous Maze Solving Robot');
   const [projectPurpose, setProjectPurpose] = useState('');
   const [selectedSeniorId, setSelectedSeniorId] = useState('');
+  const [seniorName, setSeniorName] = useState('');
   const [seniorPhone, setSeniorPhone] = useState('');
   const [expectedReturnDate, setExpectedReturnDate] = useState(
     new Date(Date.now() + 7 * 86400000).toISOString().split('T')[0]
@@ -74,12 +75,10 @@ export const ComponentDetailAndRequestPanel = ({
           setSelectedSeniorId((prevId) => {
             const match = list.find((s) => (s._id || s.id) === prevId);
             const target = match || list[0];
+            setSeniorName(target.fullName || '');
             setSeniorPhone(target.phoneNumber || '');
             return target._id || target.id;
           });
-        } else {
-          setSelectedSeniorId('');
-          setSeniorPhone('');
         }
       }
     } catch (err) {
@@ -124,8 +123,10 @@ export const ComponentDetailAndRequestPanel = ({
   // Handle Senior selection change
   const handleSeniorChange = (seniorId) => {
     setSelectedSeniorId(seniorId);
+    if (!seniorId) return;
     const senior = seniors.find(s => (s._id || s.id) === seniorId);
     if (senior) {
+      setSeniorName(senior.fullName || '');
       setSeniorPhone(senior.phoneNumber || '');
     }
   };
@@ -208,12 +209,12 @@ export const ComponentDetailAndRequestPanel = ({
       if (!proceed) return;
     }
 
-    if (seniors.length === 0) {
-      setErrorMessage('No seniors are registered yet. Please register a senior in Senior Management first.');
+    if (!seniorName.trim() || !seniorPhone.trim()) {
+      setErrorMessage('Please provide Senior Name and Senior Phone Number for approval verification.');
       return;
     }
 
-    const assignedSenior = seniors.find(s => (s._id || s.id) === selectedSeniorId) || seniors[0];
+    const assignedSenior = seniors.find(s => (s._id || s.id) === selectedSeniorId) || null;
 
     try {
       setSubmitting(true);
@@ -235,12 +236,13 @@ export const ComponentDetailAndRequestPanel = ({
         studentName: studentName.trim(),
         projectName: selectedProject,
         projectPurpose: projectPurpose.trim() || `Permission request by ${studentName}`,
-        seniorApproverId: assignedSenior?._id || assignedSenior?.id || '',
-        seniorApproverName: assignedSenior?.fullName || '',
+        seniorApproverId: selectedSeniorId || assignedSenior?._id || assignedSenior?.id || '',
+        seniorApproverName: seniorName.trim() || assignedSenior?.fullName || 'Senior Approver',
         seniorContact: seniorPhone.trim(),
+        seniorPhone: seniorPhone.trim(),
         expectedPickupDate: new Date().toISOString(),
         expectedReturnDate: new Date(expectedReturnDate).toISOString(),
-        notes: `Requested by ${studentName} (${seniorPhone}) via Storage Almirah Hub.`
+        notes: `Requested by ${studentName} via Storage Almirah Hub.`
       };
 
       const res = await api.createRequest(payload);
@@ -512,50 +514,52 @@ export const ComponentDetailAndRequestPanel = ({
             )}
           </div>
 
-          {/* Field: Senior Approver Selection & Senior Phone Number */}
-          {loadingSeniors ? (
-            <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-center text-slate-400">
-              Loading registered seniors...
-            </div>
-          ) : seniors.length === 0 ? (
-            <div className="p-3.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 space-y-2">
-              <p className="font-bold">No Registered Seniors Found</p>
-              <p className="text-[11px] text-amber-800">
-                Add at least one senior in Senior Management so students can route permission requests.
-              </p>
-              <button
-                type="button"
-                onClick={onNavigateToSeniorManagement}
-                className="px-3 py-1.5 rounded-lg bg-[#0F172A] hover:bg-slate-800 text-white font-bold text-[11px] cursor-pointer"
-              >
-                Open Senior Management
-              </button>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {/* Field: Senior Approver Name & Phone Number Input Boxes */}
+          <div className="space-y-3">
+            {seniors.length > 0 && (
               <div>
                 <label className="block font-bold text-slate-700 mb-1">
-                  Senior Approver
+                  Select Registered Senior (or type custom below)
                 </label>
                 <select
                   value={selectedSeniorId}
                   onChange={(e) => handleSeniorChange(e.target.value)}
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-xs text-xs"
+                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-2xs text-xs"
                 >
+                  <option value="">-- Custom Senior / Manual Entry --</option>
                   {seniors.map((s) => {
                     const sid = s._id || s.id;
                     return (
                       <option key={sid} value={sid}>
-                        {s.fullName} ({s.position})
+                        {s.fullName} ({s.position || s.department})
                       </option>
                     );
                   })}
                 </select>
               </div>
+            )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block font-bold text-slate-700 mb-1">
+                  Senior Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={seniorName}
+                  onChange={(e) => {
+                    setSeniorName(e.target.value);
+                    setSelectedSeniorId('');
+                  }}
+                  placeholder="e.g. Dr. Verma / Senior Name"
+                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-2xs text-xs"
+                />
+              </div>
 
               <div>
                 <label className="block font-bold text-slate-700 mb-1">
-                  Senior's Phone Number
+                  Senior's Phone Number *
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
@@ -566,18 +570,18 @@ export const ComponentDetailAndRequestPanel = ({
                     required
                     value={seniorPhone}
                     onChange={(e) => setSeniorPhone(e.target.value)}
-                    className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-mono font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-xs text-xs"
+                    className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-mono font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-2xs text-xs"
                     placeholder="+91 98765 43210"
                   />
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Send Request Action Button */}
           <button
             type="submit"
-            disabled={submitting || activeItems.length === 0 || seniors.length === 0}
+            disabled={submitting || activeItems.length === 0 || !seniorName.trim() || !seniorPhone.trim()}
             className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-2xs active:scale-[0.99] transition-all flex items-center justify-center space-x-2 text-xs disabled:opacity-50 cursor-pointer"
           >
             {submitting ? (
@@ -603,52 +607,37 @@ export const ComponentDetailAndRequestPanel = ({
               Senior Details
             </h3>
           </div>
-          <button
-            type="button"
-            onClick={onNavigateToSeniorManagement}
-            className="text-[11px] font-bold text-blue-600 hover:underline cursor-pointer"
-          >
-            Manage Seniors
-          </button>
         </div>
 
-        {activeSenior ? (
-          <>
-            <div className="flex items-start space-x-3.5">
-              <div className="w-11 h-11 rounded-2xl bg-[#0F172A] text-white flex items-center justify-center font-bold text-base shadow-md shrink-0">
-                {activeSenior.fullName?.charAt(0)?.toUpperCase() || 'S'}
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-slate-900 leading-tight">
-                  {activeSenior.fullName}
-                </h4>
-                <p className="text-xs font-semibold text-amber-600 mt-0.5">
-                  {activeSenior.position}
-                </p>
-                <p className="text-[11px] text-slate-400 mt-0.5">
-                  {activeSenior.department}
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-1.5 text-xs text-slate-600 pt-1 border-t border-slate-100">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                <span className="font-mono text-slate-800 font-semibold">{activeSenior.phoneNumber}</span>
-              </div>
-              {activeSenior.email && (
-                <div className="flex items-center space-x-2">
-                  <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-                  <span className="text-slate-700">{activeSenior.email}</span>
-                </div>
-              )}
-            </div>
-          </>
-        ) : (
-          <div className="py-4 text-center text-xs text-slate-400">
-            No senior selected. Register a senior in Senior Management to display contact details here.
+        <div className="flex items-start space-x-3.5">
+          <div className="w-11 h-11 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-base shadow-md shrink-0">
+            {seniorName?.charAt(0)?.toUpperCase() || 'S'}
           </div>
-        )}
+          <div>
+            <h4 className="text-sm font-bold text-slate-900 leading-tight">
+              {seniorName || 'Senior Approver'}
+            </h4>
+            <p className="text-xs font-semibold text-blue-600 mt-0.5">
+              {activeSenior?.position || 'Club Senior Coordinator'}
+            </p>
+            <p className="text-[11px] text-slate-400 mt-0.5">
+              {activeSenior?.department || 'Robotics Lab 304'}
+            </p>
+          </div>
+        </div>
+
+        <div className="space-y-1.5 text-xs text-slate-600 pt-1 border-t border-slate-100">
+          <div className="flex items-center space-x-2">
+            <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+            <span className="font-mono text-slate-800 font-semibold">{seniorPhone || '+91 98765 43210'}</span>
+          </div>
+          {activeSenior?.email && (
+            <div className="flex items-center space-x-2">
+              <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+              <span className="text-slate-700">{activeSenior.email}</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* =========================================================================
