@@ -271,11 +271,16 @@ export const reviewRequest = async (req, res) => {
 
       request.status = 'READY_FOR_PICKUP';
 
-      // Notify requesting student
+      const approverName = req.user.fullName || 'Senior Reviewer';
+      const approverRole = String(req.user.role || '').toUpperCase() === 'ADMIN' ? 'Administrator' : 'Senior Coordinator';
+
+      // Notify requesting student with the name of the senior/admin who approved the request
       await dataService.createNotification({
         user: request.user,
-        title: action === 'APPROVED' ? 'Request Approved — Ready for Pickup!' : 'Request Partially Approved',
-        message: `Your request ${request.requestCode} has been authorized. Please visit the lab to collect your components.`,
+        title: action === 'APPROVED' 
+          ? `Request Approved by ${approverName}` 
+          : `Request Partially Approved by ${approverName}`,
+        message: `Your request ${request.requestCode} has been approved by ${approverName} (${approverRole}).${comments ? ` Note: "${comments}".` : ''} Please visit Lab 304 to collect your components.`,
         link: `/my-requests?id=${request._id || request.id}`,
         type: 'SUCCESS'
       });
@@ -284,7 +289,7 @@ export const reviewRequest = async (req, res) => {
       await dataService.createNotification({
         userRole: 'INVENTORY_MANAGER',
         title: 'New Approved Request Ready for Issuance',
-        message: `${request.requestCode} for ${request.userName} is ready for physical checkout.`,
+        message: `${request.requestCode} for ${request.userName} was approved by ${approverName} (${approverRole}). Ready for physical checkout.`,
         link: `/inventory?tab=issuance`,
         type: 'INFO'
       });
@@ -293,10 +298,13 @@ export const reviewRequest = async (req, res) => {
       request.status = 'REJECTED';
       request.items = request.items.map(item => ({ ...item, itemStatus: 'REJECTED' }));
 
+      const reviewerName = req.user.fullName || 'Senior Reviewer';
+      const reviewerRole = String(req.user.role || '').toUpperCase() === 'ADMIN' ? 'Administrator' : 'Senior Coordinator';
+
       await dataService.createNotification({
         user: request.user,
-        title: 'Request Rejected',
-        message: `Your request ${request.requestCode} was rejected. Note: ${comments || 'No remarks provided.'}`,
+        title: `Request Rejected by ${reviewerName}`,
+        message: `Your request ${request.requestCode} was reviewed and rejected by ${reviewerName} (${reviewerRole}). Note: ${comments || 'No remarks provided.'}`,
         link: `/my-requests?id=${request._id || request.id}`,
         type: 'DANGER'
       });
@@ -304,10 +312,13 @@ export const reviewRequest = async (req, res) => {
     } else if (action === 'REQUESTED_INFO') {
       request.status = 'AWAITING_INFO';
 
+      const reviewerName = req.user.fullName || 'Senior Reviewer';
+      const reviewerRole = String(req.user.role || '').toUpperCase() === 'ADMIN' ? 'Administrator' : 'Senior Coordinator';
+
       await dataService.createNotification({
         user: request.user,
-        title: 'Additional Information Requested',
-        message: `Senior reviewer requested more details on ${request.requestCode}: "${comments}"`,
+        title: `Info Requested by ${reviewerName}`,
+        message: `${reviewerName} (${reviewerRole}) requested more details on ${request.requestCode}: "${comments || 'Please provide additional project details.'}"`,
         link: `/my-requests?id=${request._id || request.id}`,
         type: 'WARNING'
       });
@@ -316,7 +327,8 @@ export const reviewRequest = async (req, res) => {
     const updated = await dataService.updateRequest(id, {
       status: request.status,
       items: request.items,
-      approvalHistory: history
+      approvalHistory: history,
+      seniorApproverName: req.user.fullName || request.seniorApproverName
     });
 
     res.json({ success: true, request: updated });

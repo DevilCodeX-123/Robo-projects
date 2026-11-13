@@ -413,7 +413,11 @@ export const MyRequestsView = ({ onBackHome = () => {}, onRefreshData = () => {}
                   <div className="flex items-center space-x-4">
                     <span className="flex items-center space-x-1.5">
                       <UserCheck className="w-3.5 h-3.5 text-slate-400" />
-                      <span>Senior Approver: <strong className="text-slate-800">{req.seniorApproverName || 'Senior Lead'}</strong></span>
+                      <span>{req.status === 'REJECTED' ? 'Reviewed by: ' : 'Approved by: '} <strong className="text-slate-800">{
+                        (req.approvalHistory && req.approvalHistory.length > 0 && req.approvalHistory[req.approvalHistory.length - 1].approverName)
+                        || req.seniorApproverName
+                        || 'Senior Lead'
+                      }</strong></span>
                     </span>
                     <span className="flex items-center space-x-1.5">
                       <Calendar className="w-3.5 h-3.5 text-slate-400" />
