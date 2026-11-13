@@ -1,17 +1,22 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import dns from 'dns';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const BACKEND_ENV_FILE = path.resolve(__dirname, '../../.env');
 const ROOT_ENV_FILE = path.resolve(__dirname, '../../../.env');
 const DATA_DIR = path.join(__dirname, '../../data');
 const DATA_FILE = path.join(DATA_DIR, 'local_db.json');
 
 if (fs.existsSync(ROOT_ENV_FILE)) {
   dotenv.config({ path: ROOT_ENV_FILE });
+}
+if (fs.existsSync(BACKEND_ENV_FILE)) {
+  dotenv.config({ path: BACKEND_ENV_FILE });
 }
 dotenv.config();
 
@@ -58,15 +63,24 @@ export const connectDB = async () => {
   const mongoURI = process.env.MONGODB_URI;
 
   if (mongoURI && mongoURI.trim() !== '') {
+    // Configure public DNS resolution for Atlas SRV queries on Windows
+    if (mongoURI.startsWith('mongodb+srv://')) {
+      try {
+        dns.setServers(['8.8.8.8', '1.1.1.1']);
+      } catch (dnsErr) {
+        // Continue if custom DNS set is not permitted in sandbox
+      }
+    }
+
     try {
       console.log('🔄 Connecting to MongoDB Atlas...');
       const timeoutPromise = new Promise((_, reject) => 
-        setTimeout(() => reject(new Error('Connection timed out after 3.5s')), 3500)
+        setTimeout(() => reject(new Error('Connection timed out after 7s')), 7000)
       );
       await Promise.race([
         mongoose.connect(mongoURI, {
-          serverSelectionTimeoutMS: 3000,
-          connectTimeoutMS: 3000,
+          serverSelectionTimeoutMS: 6000,
+          connectTimeoutMS: 6000,
         }),
         timeoutPromise
       ]);

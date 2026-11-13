@@ -105,7 +105,7 @@ const startServer = async () => {
       processReturnReminders().catch(err => console.error('Reminder scheduler error:', err.message));
     }, 6 * 60 * 60 * 1000).unref();
 
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
       console.log(`====================================================`);
       console.log(`🤖 Robotics Club API Server running on port ${PORT}`);
       console.log(`📡 URL: http://localhost:${PORT}`);

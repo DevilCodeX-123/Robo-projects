@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import { isMongoConnected, localStore, saveLocalStore } from '../config/db.js';
 import UserModel from '../models/User.js';
 import SeniorModel from '../models/Senior.js';
@@ -22,8 +23,17 @@ export const dataService = {
   },
 
   async findUserById(id) {
+    if (!id) return null;
     if (isMongoConnected) {
-      return await UserModel.findById(id);
+      try {
+        if (mongoose.Types.ObjectId.isValid(id)) {
+          const user = await UserModel.findById(id);
+          if (user) return user;
+        }
+        return await UserModel.findOne({ $or: [{ email: String(id).toLowerCase() }, { membershipId: id }] });
+      } catch {
+        return null;
+      }
     }
     return localStore.users.find(u => u._id === id || u.id === id) || null;
   },
@@ -53,8 +63,14 @@ export const dataService = {
   },
 
   async updateUser(id, updateData) {
+    if (!id) return null;
     if (isMongoConnected) {
-      return await UserModel.findByIdAndUpdate(id, updateData, { new: true });
+      try {
+        if (!mongoose.Types.ObjectId.isValid(id)) return null;
+        return await UserModel.findByIdAndUpdate(id, updateData, { new: true });
+      } catch {
+        return null;
+      }
     }
     const idx = localStore.users.findIndex(u => u._id === id || u.id === id);
     if (idx !== -1) {
@@ -66,8 +82,14 @@ export const dataService = {
   },
 
   async deleteUser(id) {
+    if (!id) return null;
     if (isMongoConnected) {
-      return await UserModel.findByIdAndDelete(id);
+      try {
+        if (!mongoose.Types.ObjectId.isValid(id)) return null;
+        return await UserModel.findByIdAndDelete(id);
+      } catch {
+        return null;
+      }
     }
     const idx = localStore.users.findIndex(u => u._id === id || u.id === id);
     if (idx !== -1) {
@@ -337,8 +359,14 @@ export const dataService = {
   },
 
   async getRequestById(id) {
+    if (!id) return null;
     if (isMongoConnected) {
-      return await RequestModel.findById(id);
+      try {
+        if (!mongoose.Types.ObjectId.isValid(id)) return null;
+        return await RequestModel.findById(id);
+      } catch {
+        return null;
+      }
     }
     return localStore.requests.find(r => r._id === id || r.id === id) || null;
   },
@@ -362,8 +390,14 @@ export const dataService = {
   },
 
   async updateRequest(id, updateData) {
+    if (!id) return null;
     if (isMongoConnected) {
-      return await RequestModel.findByIdAndUpdate(id, updateData, { new: true });
+      try {
+        if (!mongoose.Types.ObjectId.isValid(id)) return null;
+        return await RequestModel.findByIdAndUpdate(id, updateData, { new: true });
+      } catch {
+        return null;
+      }
     }
     const idx = localStore.requests.findIndex(r => r._id === id || r.id === id);
     if (idx !== -1) {
