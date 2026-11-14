@@ -13,30 +13,61 @@ const getHeaders = () => {
   return headers;
 };
 
+const safeJson = async (res) => {
+  try {
+    const contentType = res.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      const text = await res.text();
+      if (text.includes('<!DOCTYPE') || text.includes('<html')) {
+        return {
+          success: false,
+          message: 'Backend server offline or still waking up. Please verify your backend API URL.'
+        };
+      }
+      return { success: false, message: text || `Server returned ${res.status}` };
+    }
+    return await res.json();
+  } catch (err) {
+    return { success: false, message: err.message || 'Error communicating with server.' };
+  }
+};
+
 export const api = {
   // Health Check
   async getHealth() {
-    const res = await fetch(`${API_BASE}/health`);
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/health`);
+      return safeJson(res);
+    } catch (err) {
+      return { success: false, message: err.message };
+    }
   },
 
   // Auth
   async login(email, password) {
-    const res = await fetch(`${API_BASE}/auth/login`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password })
-    });
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      });
+      return safeJson(res);
+    } catch (err) {
+      return { success: false, message: err.message || 'Network error: Backend server is unreachable.' };
+    }
   },
 
   async register(userData) {
-    const res = await fetch(`${API_BASE}/auth/register`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userData)
-    });
-    return res.json();
+    try {
+      const res = await fetch(`${API_BASE}/auth/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(userData)
+      });
+      return safeJson(res);
+    } catch (err) {
+      return { success: false, message: err.message || 'Network error: Backend server is unreachable.' };
+    }
   },
 
   async getProfile() {
