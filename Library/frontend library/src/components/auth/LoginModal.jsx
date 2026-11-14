@@ -34,11 +34,11 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
     try {
       const res =
         mode === 'login'
-          ? await login(email.trim(), password)
+          ? await login(email.trim(), password ? password.trim() : 'password123')
           : await register({
               fullName: fullName.trim(),
               email: email.trim(),
-              password,
+              password: password ? password.trim() : 'password123',
               department: department.trim()
             });
 
@@ -177,22 +177,27 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="e.g. aryan@robotics.club"
+                  placeholder="e.g. rahul@college.edu or your email"
                   className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
+              <p className="text-[11px] text-slate-500 mt-1">
+                Enter your email to sign in directly. New student accounts are created automatically.
+              </p>
             </div>
 
             <div>
-              <label className="block font-bold text-slate-700 mb-1">Password *</label>
+              <label className="block font-bold text-slate-700 mb-1">
+                Password {mode === 'login' ? <span className="font-normal text-slate-400">(optional, default: password123)</span> : '*'}
+              </label>
               <div className="relative">
                 <Lock className="w-3.5 h-3.5 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
                   type="password"
-                  required
+                  required={mode === 'register'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Enter password (demo: password123)"
+                  placeholder="Enter password (default: password123)"
                   className="w-full pl-9 pr-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-[#0F172A]"
                 />
               </div>
@@ -208,7 +213,7 @@ export const LoginModal = ({ isOpen, onClose, allowDismiss = true, onAuthSuccess
                 {submitting
                   ? 'Please wait...'
                   : mode === 'login'
-                  ? 'Sign In'
+                  ? 'Sign In / Open Portal'
                   : 'Create Student Account'}
               </span>
             </button>
