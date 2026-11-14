@@ -51,8 +51,8 @@ app.get('/api/health', (req, res) => {
 // Mount API Routes
 app.use('/api', apiRoutes);
 
-// Serve built frontend bundle in production when dist exists
-if (process.env.NODE_ENV === 'production' && fs.existsSync(path.join(FRONTEND_DIST, 'index.html'))) {
+// Serve built frontend bundle when dist exists
+if (fs.existsSync(path.join(FRONTEND_DIST, 'index.html'))) {
   app.use(express.static(FRONTEND_DIST));
   app.get('*', (req, res, next) => {
     if (req.path.startsWith('/api')) return next();

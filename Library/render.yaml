@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: robo-stock-backend
+    name: robo-stock
     env: node
     plan: free
-    rootDir: backend
-    buildCommand: npm install
+    buildCommand: npm run build
     startCommand: npm start
     envVars:
       - key: MONGODB_URI
