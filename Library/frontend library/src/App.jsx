@@ -590,9 +590,9 @@ export function App() {
 
       {/* Account Login / Registration / Switch Modal */}
       <LoginModal
-        isOpen={isLoginModalOpen || (!authLoading && !user)}
+        isOpen={isLoginModalOpen}
         onClose={() => setIsLoginModalOpen(false)}
-        allowDismiss={Boolean(user)}
+        allowDismiss={true}
         onAuthSuccess={(loggedUser) => {
           const r = String(loggedUser?.role || '').toUpperCase();
           if (r === 'ADMIN' || r === 'SENIOR') setCurrentView('management-dashboard');
