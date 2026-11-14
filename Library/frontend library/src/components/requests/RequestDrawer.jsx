@@ -90,8 +90,9 @@ export const RequestDrawer = ({ isOpen, onClose, onSuccess }) => {
         })),
         projectName,
         projectPurpose,
-        seniorApproverId,
-        seniorContact,
+        seniorApproverId: '',
+        seniorApproverName: 'Any Senior / Admin',
+        seniorContact: '',
         expectedPickupDate,
         expectedReturnDate,
         notes
@@ -265,46 +266,6 @@ export const RequestDrawer = ({ isOpen, onClose, onSuccess }) => {
             </div>
           </div>
 
-          {/* Senior Approver Selection */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100">
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1 flex items-center space-x-1">
-                <User className="w-3.5 h-3.5 text-blue-600" />
-                <span>Senior / Approver *</span>
-              </label>
-              <select
-                value={seniorApproverId}
-                onChange={handleSeniorChange}
-                className="w-full px-3.5 py-2 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
-              >
-                {seniorsList.length === 0 ? (
-                  <option value="">No registered seniors yet</option>
-                ) : (
-                  seniorsList.map(s => {
-                    const sid = s._id || s.id;
-                    return (
-                      <option key={sid} value={sid}>
-                        {s.fullName} ({s.position || s.department})
-                      </option>
-                    );
-                  })
-                )}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
-                Senior's Contact / Phone Number
-              </label>
-              <input
-                type="text"
-                value={seniorContact}
-                onChange={(e) => setSeniorContact(e.target.value)}
-                placeholder="+91 98765 XXXXX"
-                className="w-full px-3.5 py-2 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
-              />
-            </div>
-          </div>
 
           {/* Pickup and Return Dates */}
           <div className="grid grid-cols-2 gap-3 pt-2 border-t border-slate-100">

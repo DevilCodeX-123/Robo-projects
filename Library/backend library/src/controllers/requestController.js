@@ -90,10 +90,10 @@ export const createRequest = async (req, res) => {
     }
 
     const assignedSeniorId = registeredSenior?._id || registeredSenior?.id || seniorUser?._id || seniorUser?.id;
-    const assignedSeniorName = req.body.seniorApproverName || registeredSenior?.fullName || seniorUser?.fullName || 'Senior Approver';
-    const assignedSeniorPhone = seniorContact || req.body.seniorPhone || registeredSenior?.phoneNumber || seniorUser?.contactNumber || '';
-    const assignedSeniorDept = registeredSenior?.department || seniorUser?.department || '';
-    const assignedSeniorPos = registeredSenior?.position || 'Senior Approver';
+    const assignedSeniorName = req.body.seniorApproverName || 'Any Senior / Admin';
+    const assignedSeniorPhone = seniorContact || req.body.seniorPhone || '';
+    const assignedSeniorDept = registeredSenior?.department || seniorUser?.department || 'Robotics Lab 304';
+    const assignedSeniorPos = registeredSenior?.position || 'Club Senior Coordinator';
 
     const requesterName = (studentName && studentName.trim()) || req.user.fullName;
 

@@ -38,17 +38,10 @@ export const ComponentDetailAndRequestPanel = ({
   // Active component for the Component Work Feature
   const displayComp = selectedComponent || (selectedComponents.length > 0 ? selectedComponents[0] : null);
 
-  // Live Registered Seniors from Backend DB
-  const [seniors, setSeniors] = useState([]);
-  const [loadingSeniors, setLoadingSeniors] = useState(true);
-
   // Form State
   const [studentName, setStudentName] = useState(user?.fullName || 'Student');
   const [selectedProject, setSelectedProject] = useState(DEMO_PROJECTS[0] || 'Autonomous Maze Solving Robot');
   const [projectPurpose, setProjectPurpose] = useState('');
-  const [selectedSeniorId, setSelectedSeniorId] = useState('');
-  const [seniorName, setSeniorName] = useState('');
-  const [seniorPhone, setSeniorPhone] = useState('');
   const [expectedReturnDate, setExpectedReturnDate] = useState(
     new Date(Date.now() + 7 * 86400000).toISOString().split('T')[0]
   );
@@ -62,37 +55,6 @@ export const ComponentDetailAndRequestPanel = ({
   const [errorMessage, setErrorMessage] = useState('');
   const [recentRequests, setRecentRequests] = useState([]);
   const [loadingRequests, setLoadingRequests] = useState(false);
-
-  // Fetch registered seniors from backend API
-  const fetchSeniorsList = async () => {
-    try {
-      setLoadingSeniors(true);
-      const res = await api.getSeniors();
-      if (res.success) {
-        const list = res.seniors || [];
-        setSeniors(list);
-        if (list.length > 0) {
-          setSelectedSeniorId((prevId) => {
-            const match = list.find((s) => (s._id || s.id) === prevId);
-            const target = match || list[0];
-            setSeniorName(target.fullName || '');
-            setSeniorPhone(target.phoneNumber || '');
-            return target._id || target.id;
-          });
-        }
-      }
-    } catch (err) {
-      console.error('Failed to fetch registered seniors:', err);
-    } finally {
-      setLoadingSeniors(false);
-    }
-  };
-
-  useEffect(() => {
-    if (user) {
-      fetchSeniorsList();
-    }
-  }, [user, seniorsRefreshKey]);
 
   // Sync student name when user changes
   useEffect(() => {
@@ -209,13 +171,6 @@ export const ComponentDetailAndRequestPanel = ({
       if (!proceed) return;
     }
 
-    if (!seniorName.trim() || !seniorPhone.trim()) {
-      setErrorMessage('Please provide Senior Name and Senior Phone Number for approval verification.');
-      return;
-    }
-
-    const assignedSenior = seniors.find(s => (s._id || s.id) === selectedSeniorId) || null;
-
     try {
       setSubmitting(true);
 
@@ -236,10 +191,10 @@ export const ComponentDetailAndRequestPanel = ({
         studentName: studentName.trim(),
         projectName: selectedProject,
         projectPurpose: projectPurpose.trim() || `Permission request by ${studentName}`,
-        seniorApproverId: selectedSeniorId || assignedSenior?._id || assignedSenior?.id || '',
-        seniorApproverName: seniorName.trim() || assignedSenior?.fullName || 'Senior Approver',
-        seniorContact: seniorPhone.trim(),
-        seniorPhone: seniorPhone.trim(),
+        seniorApproverId: '',
+        seniorApproverName: 'Any Senior / Admin',
+        seniorContact: '',
+        seniorPhone: '',
         expectedPickupDate: new Date().toISOString(),
         expectedReturnDate: new Date(expectedReturnDate).toISOString(),
         notes: `Requested by ${studentName} via Storage Almirah Hub.`
@@ -514,74 +469,10 @@ export const ComponentDetailAndRequestPanel = ({
             )}
           </div>
 
-          {/* Field: Senior Approver Name & Phone Number Input Boxes */}
-          <div className="space-y-3">
-            {seniors.length > 0 && (
-              <div>
-                <label className="block font-bold text-slate-700 mb-1">
-                  Select Registered Senior (or type custom below)
-                </label>
-                <select
-                  value={selectedSeniorId}
-                  onChange={(e) => handleSeniorChange(e.target.value)}
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-2xs text-xs"
-                >
-                  <option value="">-- Custom Senior / Manual Entry --</option>
-                  {seniors.map((s) => {
-                    const sid = s._id || s.id;
-                    return (
-                      <option key={sid} value={sid}>
-                        {s.fullName} ({s.position || s.department})
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div>
-                <label className="block font-bold text-slate-700 mb-1">
-                  Senior Name *
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={seniorName}
-                  onChange={(e) => {
-                    setSeniorName(e.target.value);
-                    setSelectedSeniorId('');
-                  }}
-                  placeholder="e.g. Dr. Verma / Senior Name"
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-2xs text-xs"
-                />
-              </div>
-
-              <div>
-                <label className="block font-bold text-slate-700 mb-1">
-                  Senior's Phone Number *
-                </label>
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
-                    <Phone className="w-3.5 h-3.5" />
-                  </div>
-                  <input
-                    type="text"
-                    required
-                    value={seniorPhone}
-                    onChange={(e) => setSeniorPhone(e.target.value)}
-                    className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 font-mono font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 shadow-2xs text-xs"
-                    placeholder="+91 98765 43210"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Send Request Action Button */}
           <button
             type="submit"
-            disabled={submitting || activeItems.length === 0 || !seniorName.trim() || !seniorPhone.trim()}
+            disabled={submitting || activeItems.length === 0}
             className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold shadow-2xs active:scale-[0.99] transition-all flex items-center justify-center space-x-2 text-xs disabled:opacity-50 cursor-pointer"
           >
             {submitting ? (
@@ -597,51 +488,7 @@ export const ComponentDetailAndRequestPanel = ({
       </div>
 
       {/* =========================================================================
-          3. SENIOR DETAILS SECTION
-         ========================================================================= */}
-      <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-5 space-y-3.5">
-        <div className="flex items-center justify-between pb-2.5 border-b border-slate-100">
-          <div className="flex items-center space-x-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-600" />
-            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-800">
-              Senior Details
-            </h3>
-          </div>
-        </div>
-
-        <div className="flex items-start space-x-3.5">
-          <div className="w-11 h-11 rounded-2xl bg-slate-900 text-white flex items-center justify-center font-bold text-base shadow-md shrink-0">
-            {seniorName?.charAt(0)?.toUpperCase() || 'S'}
-          </div>
-          <div>
-            <h4 className="text-sm font-bold text-slate-900 leading-tight">
-              {seniorName || 'Senior Approver'}
-            </h4>
-            <p className="text-xs font-semibold text-blue-600 mt-0.5">
-              {activeSenior?.position || 'Club Senior Coordinator'}
-            </p>
-            <p className="text-[11px] text-slate-400 mt-0.5">
-              {activeSenior?.department || 'Robotics Lab 304'}
-            </p>
-          </div>
-        </div>
-
-        <div className="space-y-1.5 text-xs text-slate-600 pt-1 border-t border-slate-100">
-          <div className="flex items-center space-x-2">
-            <Phone className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-            <span className="font-mono text-slate-800 font-semibold">{seniorPhone || '+91 98765 43210'}</span>
-          </div>
-          {activeSenior?.email && (
-            <div className="flex items-center space-x-2">
-              <Mail className="w-3.5 h-3.5 text-slate-400 shrink-0" />
-              <span className="text-slate-700">{activeSenior.email}</span>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* =========================================================================
-          4. REQUEST STATUS SECTION
+          3. REQUEST STATUS SECTION
          ========================================================================= */}
       <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md p-5 space-y-3.5">
         <div className="flex items-center justify-between pb-2.5 border-b border-slate-100">
