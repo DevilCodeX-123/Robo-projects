@@ -1026,6 +1026,39 @@
       "approvalHistory": [],
       "createdAt": "2026-11-13T08:09:39.478Z",
       "updatedAt": "2026-11-13T08:09:39.478Z"
+    },
+    {
+      "_id": "id_bwuqkfsmwgopt6f",
+      "requestCode": "REQ-2026-008",
+      "user": "usr_k0t3ualtx",
+      "userName": "Aarav Sharma",
+      "userEmail": "student@robotics.club",
+      "projectName": "Autonomous Bot",
+      "projectPurpose": "Testing sensors",
+      "seniorContact": "",
+      "seniorApprover": "usr_3f92szsxk",
+      "seniorApproverName": "Any Senior / Admin",
+      "seniorDepartment": "Electronics & Communication",
+      "seniorPosition": "Club Senior Coordinator",
+      "items": [
+        {
+          "component": "cmp_94rqqpkmj",
+          "componentName": "Arduino Uno",
+          "componentCode": "CMP-MCU-001",
+          "requestedQuantity": 1,
+          "approvedQuantity": 0,
+          "issuedQuantity": 0,
+          "returnedQuantity": 0,
+          "itemStatus": "PENDING"
+        }
+      ],
+      "status": "SUBMITTED",
+      "expectedPickupDate": "2026-11-15T17:33:38.679Z",
+      "expectedReturnDate": "2026-11-21T17:33:38.679Z",
+      "notes": "",
+      "approvalHistory": [],
+      "createdAt": "2026-11-14T17:33:38.679Z",
+      "updatedAt": "2026-11-14T17:33:38.679Z"
     }
   ],
   "transactions": [],
@@ -1204,6 +1237,17 @@
       "type": "INFO",
       "isRead": false,
       "createdAt": "2026-11-13T08:09:39.481Z"
+    },
+    {
+      "_id": "id_tvcn5uwmwgopt6g",
+      "user": "usr_3f92szsxk",
+      "userRole": "SENIOR",
+      "title": "New Component Request for Any Senior / Admin",
+      "message": "Aarav Sharma requested Arduino Uno (REQ-2026-008).",
+      "link": "/approvals?id=id_bwuqkfsmwgopt6f",
+      "type": "INFO",
+      "isRead": false,
+      "createdAt": "2026-11-14T17:33:38.680Z"
     }
   ],
   "auditLogs": [
@@ -1333,6 +1377,50 @@
         "itemsCount": 1
       },
       "timestamp": "2026-11-13T08:09:39.485Z"
+    },
+    {
+      "_id": "id_lsj6oc6mwevq3pv",
+      "user": "usr_k0t3ualtx",
+      "userName": "Aarav Sharma",
+      "userRole": "MEMBER",
+      "action": "USER_LOGIN",
+      "entityType": "USER",
+      "entityId": "usr_k0t3ualtx",
+      "timestamp": "2026-11-13T11:14:17.299Z"
+    },
+    {
+      "_id": "id_mi5wq1cmwevr3ux",
+      "user": "usr_1c1tjrdvp",
+      "userName": "Prof. Ananya Iyer",
+      "userRole": "ADMIN",
+      "action": "USER_LOGIN",
+      "entityType": "USER",
+      "entityId": "usr_1c1tjrdvp",
+      "timestamp": "2026-11-13T11:15:04.137Z"
+    },
+    {
+      "_id": "id_yc8gggamwgopt5l",
+      "user": "usr_k0t3ualtx",
+      "userName": "Aarav Sharma",
+      "userRole": "MEMBER",
+      "action": "USER_LOGIN",
+      "entityType": "USER",
+      "entityId": "usr_k0t3ualtx",
+      "timestamp": "2026-11-14T17:33:38.649Z"
+    },
+    {
+      "_id": "id_zrcugqkmwgopt6i",
+      "user": "usr_k0t3ualtx",
+      "userName": "Aarav Sharma",
+      "userRole": "MEMBER",
+      "action": "REQUEST_SUBMITTED",
+      "entityType": "REQUEST",
+      "entityId": "id_bwuqkfsmwgopt6f",
+      "details": {
+        "requestCode": "REQ-2026-008",
+        "itemsCount": 1
+      },
+      "timestamp": "2026-11-14T17:33:38.682Z"
     }
   ]
 }
